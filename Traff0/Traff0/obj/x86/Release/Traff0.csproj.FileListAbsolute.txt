@@ -1,0 +1,10 @@
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\bin\Release\Traff0.exe
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\bin\Release\Traff0.pdb
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\Traff0.Properties.Resources.resources
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\Traff0.VoltageAmperageControl.resources
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\Traff0.exe
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\Traff0.pdb
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Release\Traff0.TrafoForm.resources

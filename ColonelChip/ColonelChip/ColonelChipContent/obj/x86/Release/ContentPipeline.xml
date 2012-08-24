@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Bullets\bullet_left.png</Source>
+      <Name>Bullets\bullet_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bullet_left.xnb</Output>
+      <Time>2012-08-12T08:21:00.1472548+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Bullets\bullet_right.png</Source>
+      <Name>Bullets\bullet_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bullet_right.xnb</Output>
+      <Time>2012-08-12T08:21:00.1482548+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Enemys\enemyTurnedLeft.png</Source>
+      <Name>Enemys\enemyTurnedLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Enemys\enemyTurnedLeft.xnb</Output>
+      <Time>2012-08-12T09:44:56.0322909+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Enemys\enemyTurnedRight.png</Source>
+      <Name>Enemys\enemyTurnedRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Enemys\enemyTurnedRight.xnb</Output>
+      <Time>2012-08-12T09:44:56.033291+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\Floor.png</Source>
+      <Name>Backgrounds\Floor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Backgrounds\Floor.xnb</Output>
+      <Time>2012-08-12T11:54:19.9323606+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Others\Stepper.png</Source>
+      <Name>Others\Stepper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Others\Stepper.xnb</Output>
+      <Time>2012-08-12T12:05:28.8026178+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\Background.png</Source>
+      <Name>Backgrounds\Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Backgrounds\Background.xnb</Output>
+      <Time>2012-08-15T10:29:51.1573085+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Bullets\bugBullet.png</Source>
+      <Name>Bullets\bugBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bugBullet.xnb</Output>
+      <Time>2012-08-15T13:07:36.9405544+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Player\PlayerTurnedLeft.png</Source>
+      <Name>Player\PlayerTurnedLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedLeft.xnb</Output>
+      <Time>2012-08-20T15:32:16.1682041+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Player\PlayerTurnedLeftWalking.png</Source>
+      <Name>Player\PlayerTurnedLeftWalking</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedLeftWalking.xnb</Output>
+      <Time>2012-08-20T15:32:16.1692042+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Player\PlayerTurnedRight.png</Source>
+      <Name>Player\PlayerTurnedRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedRight.xnb</Output>
+      <Time>2012-08-20T15:32:16.1692042+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Player\PlayerTurnedRightWalking.png</Source>
+      <Name>Player\PlayerTurnedRightWalking</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedRightWalking.xnb</Output>
+      <Time>2012-08-20T15:32:16.1702042+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\ShootingSilencer.wav</Source>
+      <Name>Sounds\ShootingSilencer</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\ShootingSilencer.xnb</Output>
+      <Time>2012-08-12T11:04:05.6219519+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\EnemyDyingSound.wav</Source>
+      <Name>Sounds\EnemyDyingSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\EnemyDyingSound.xnb</Output>
+      <Time>2012-08-12T14:24:44.56354+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\shootingBugSound.wav</Source>
+      <Name>Sounds\shootingBugSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\shootingBugSound.xnb</Output>
+      <Time>2012-08-15T17:44:20.1766546+03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChipContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChipContent\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-08-21T10:07:35.8907516+03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

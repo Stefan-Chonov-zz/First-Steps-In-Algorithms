@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Traff0
+{
+    public partial class LabelTextBox : UserControl
+    {
+        public LabelTextBox()
+        {
+            InitializeComponent();
+        }
+
+        public string Text
+        {
+            set
+            {
+                this.textLabel.Text = value;
+            }
+        }
+
+        public string Parameter
+        {
+            get
+            {
+                return this.parameterTextBox.Text;
+            }
+            private set
+            {
+                this.parameterTextBox.Text = value;
+            }
+        }
+    }
+}

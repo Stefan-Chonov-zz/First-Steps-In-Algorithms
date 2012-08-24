@@ -1,0 +1,48 @@
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\bin\Debug\Traff0.exe
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\bin\Debug\Traff0.pdb
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.Properties.Resources.resources
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.VoltageAmperageControl.resources
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.exe
+C:\Users\destruct0\documents\visual studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.pdb
+C:\Users\destruct0\Documents\Visual Studio 2010\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.TrafoForm.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\bin\Debug\Traff0.exe.manifest
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\bin\Debug\Traff0.application
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\bin\Debug\Traff0.exe
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\bin\Debug\Traff0.pdb
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.TrafoForm.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.GetWindingsParametersForm.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.LabelTextBox.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.OptionalParameterUserControl.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.Properties.Resources.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.SecondaryWindingsUserControl.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.WindingsInfoForm.resources
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.exe.manifest
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.application
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.exe
+D:\Desktop_28_07_2011\Projects\Traff0\Traff0\obj\x86\Debug\Traff0.pdb
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.exe
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.pdb
+D:\Moe\MyProjects\Traff0\Traff0\bin\Debug\Traff0.exe.manifest
+D:\Moe\MyProjects\Traff0\Traff0\bin\Debug\Traff0.application
+D:\Moe\MyProjects\Traff0\Traff0\bin\Debug\Traff0.exe
+D:\Moe\MyProjects\Traff0\Traff0\bin\Debug\Traff0.pdb
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.LabelTextBox.resources
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.OptionalParameterUserControl.resources
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.Properties.Resources.resources
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.SecondaryWindingsUserControl.resources
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.WindingsInfoForm.resources
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.exe.manifest
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.application
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.WindingsParametersForm.resources
+D:\Moe\MyProjects\Traff0\Traff0\obj\x86\Debug\Traff0.Traff0Form.resources
+C:\Users\Stefcho\Desktop\My Projects\Traff0\Traff0\obj\x86\Debug\Traff0.exe
+C:\Users\Stefcho\Desktop\My Projects\Traff0\Traff0\obj\x86\Debug\Traff0.pdb

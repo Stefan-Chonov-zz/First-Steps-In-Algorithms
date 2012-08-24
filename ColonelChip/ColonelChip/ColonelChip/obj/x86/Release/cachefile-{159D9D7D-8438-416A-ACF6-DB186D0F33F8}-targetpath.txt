@@ -1,0 +1,15 @@
+Content\Bullets\bullet_left.xnb
+Content\Bullets\bullet_right.xnb
+Content\Enemys\enemyTurnedLeft.xnb
+Content\Enemys\enemyTurnedRight.xnb
+Content\Backgrounds\Floor.xnb
+Content\Others\Stepper.xnb
+Content\Backgrounds\Background.xnb
+Content\Bullets\bugBullet.xnb
+Content\Player\PlayerTurnedLeft.xnb
+Content\Player\PlayerTurnedLeftWalking.xnb
+Content\Player\PlayerTurnedRight.xnb
+Content\Player\PlayerTurnedRightWalking.xnb
+Content\Sounds\ShootingSilencer.xnb
+Content\Sounds\EnemyDyingSound.xnb
+Content\Sounds\shootingBugSound.xnb

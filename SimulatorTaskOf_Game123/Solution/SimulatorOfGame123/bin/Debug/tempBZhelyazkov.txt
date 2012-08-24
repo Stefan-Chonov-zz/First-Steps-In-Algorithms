@@ -1,0 +1,8 @@
+DownRight
+Vertical
+19
+18
+0
+1
+0
+397

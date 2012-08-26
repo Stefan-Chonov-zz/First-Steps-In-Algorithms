@@ -1,7 +1,0 @@
-DownRight
-Vertical
-11
-7
-4
-7
-0

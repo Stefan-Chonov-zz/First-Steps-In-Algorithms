@@ -1,0 +1,10 @@
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\bin\Debug\AlgorithmicTaskOfGame_123.exe
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\bin\Debug\AlgorithmicTaskOfGame_123.pdb
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\obj\x86\Debug\AlgorithmicTaskOfGame_123.exe
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\obj\x86\Debug\AlgorithmicTaskOfGame_123.pdb
+C:\Users\destruct0\Desktop\Game_123_From_StefanChonov&KolyoDankov\AlgorithmicTaskOf_Game123\Solution\AlgorithmicTaskOfGame_123\obj\x86\Debug\AlgorithmicTaskOfGame_123.exe
+C:\Users\destruct0\Desktop\Game_123_From_StefanChonov&KolyoDankov\AlgorithmicTaskOf_Game123\Solution\AlgorithmicTaskOfGame_123\obj\x86\Debug\AlgorithmicTaskOfGame_123.pdb
+C:\Users\destruct0\Desktop\Game_123_From_StefanChonov&KolyoDankov\AlgorithmicTaskOf_Game123\Solution\AlgorithmicTaskOfGame_123\bin\Debug\AlgorithmicTaskOfGame_123.exe
+C:\Users\destruct0\Desktop\Game_123_From_StefanChonov&KolyoDankov\AlgorithmicTaskOf_Game123\Solution\AlgorithmicTaskOfGame_123\bin\Debug\AlgorithmicTaskOfGame_123.pdb
+C:\Users\destruct0\Desktop\Game_123_From_StefanChonov&KolyoDankov\AlgorithmicTaskOf_Game123\Solution\AlgorithmicTaskOfGame_123\obj\x86\Debug\ResolveAssemblyReference.cache

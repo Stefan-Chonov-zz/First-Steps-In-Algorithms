@@ -1,0 +1,76 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="SimulatorOfGame123.StartButton"
+	x:Name="UserControl" d:DesignHeight="480" Width="120" Height="50">
+	<UserControl.Resources>
+		<Storyboard x:Key="sbMouseOver">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0" Value="#FFFDFF00"/>
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFF7500"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFE8C00"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFF6900"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFF6900"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="reflection">
+				<EasingColorKeyFrame KeyTime="0" Value="White"/>
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#B3FFFFFF"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="sbMouseLeave">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0" Value="#FFFF7500"/>
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFDFF00"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0" Value="#FFFE8C00"/>
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFFAF00"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0" Value="#FFFF6900"/>
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFFAF00"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="mainBG">
+				<EasingColorKeyFrame KeyTime="0" Value="#FFFF6900"/>
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFDFF00"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="reflection">
+				<EasingColorKeyFrame KeyTime="0" Value="#B3FFFFFF"/>
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="White"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter">
+			<BeginStoryboard Storyboard="{StaticResource sbMouseOver}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave">
+			<BeginStoryboard x:Name="sbMouseLeave_BeginStoryboard" Storyboard="{StaticResource sbMouseLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard x:Name="sbMouseLeave_BeginStoryboard1" Storyboard="{StaticResource sbMouseLeave}"/>
+		</EventTrigger>
+	</UserControl.Triggers>
+
+	<Grid x:Name="LayoutRoot">
+		<Rectangle x:Name="mainBG" Stroke="Black" Height="50" RadiusY="9" RadiusX="9" Margin="0,0,-0.5,0"><Rectangle.Fill><LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"><GradientStop Color="#FFFDFF00" Offset="0"/><GradientStop Color="#FFFDFF00" Offset="0.996"/><GradientStop Color="#FFFFAF00" Offset="0.417"/><GradientStop Color="#FFFEB300" Offset="0.626"/></LinearGradientBrush></Rectangle.Fill></Rectangle>
+		<TextBlock x:Name="textField" Margin="5,7.24,4.5,7.24" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontFamily="Ravie" FontSize="26.667" HorizontalAlignment="Center" d:LayoutOverrides="Height" Text="Next"/>
+		<Rectangle x:Name="reflection" Margin="3.993,3.668,3.674,20.665" RadiusY="9" RadiusX="9" Stroke="Black" StrokeThickness="0">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Offset="0.996"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+	</Grid>
+</UserControl>

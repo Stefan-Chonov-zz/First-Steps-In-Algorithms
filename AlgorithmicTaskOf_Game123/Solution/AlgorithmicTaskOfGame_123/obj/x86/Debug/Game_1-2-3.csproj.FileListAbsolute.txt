@@ -1,0 +1,5 @@
+c:\users\destruct0\documents\visual studio 2010\Projects\PcMagazin\Game_1-2-3\bin\Debug\Game_1-2-3.exe
+c:\users\destruct0\documents\visual studio 2010\Projects\PcMagazin\Game_1-2-3\bin\Debug\Game_1-2-3.pdb
+c:\users\destruct0\documents\visual studio 2010\Projects\PcMagazin\Game_1-2-3\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\destruct0\documents\visual studio 2010\Projects\PcMagazin\Game_1-2-3\obj\x86\Debug\Game_1-2-3.exe
+c:\users\destruct0\documents\visual studio 2010\Projects\PcMagazin\Game_1-2-3\obj\x86\Debug\Game_1-2-3.pdb

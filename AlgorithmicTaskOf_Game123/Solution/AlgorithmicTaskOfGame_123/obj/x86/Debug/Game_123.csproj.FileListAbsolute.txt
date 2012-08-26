@@ -1,0 +1,15 @@
+C:\Users\destruct0\Documents\Visual Studio 2010\Projects\PcMagazin\Game_1-2-3\bin\Debug\Game_1-2-3.exe
+C:\Users\destruct0\Documents\Visual Studio 2010\Projects\PcMagazin\Game_1-2-3\bin\Debug\Game_1-2-3.pdb
+C:\Users\destruct0\Documents\Visual Studio 2010\Projects\PcMagazin\Game_1-2-3\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\destruct0\Documents\Visual Studio 2010\Projects\PcMagazin\Game_1-2-3\obj\x86\Debug\Game_1-2-3.exe
+C:\Users\destruct0\Documents\Visual Studio 2010\Projects\PcMagazin\Game_1-2-3\obj\x86\Debug\Game_1-2-3.pdb
+C:\PCMagazine\Game_1-2-3\obj\x86\Debug\Game_1-2-3.exe
+C:\PCMagazine\Game_1-2-3\obj\x86\Debug\Game_1-2-3.pdb
+C:\PCMagazine\Game_1-2-3\bin\Debug\Game_1-2-3.exe
+C:\PCMagazine\Game_1-2-3\bin\Debug\Game_1-2-3.pdb
+C:\PCMagazine\Game_1-2-3\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\obj\x86\Debug\Game_1-2-3.exe
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\obj\x86\Debug\Game_1-2-3.pdb
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\bin\Debug\Game_1-2-3.exe
+C:\Users\destruct0\Desktop\PCMagazine\Game_1-2-3\bin\Debug\Game_1-2-3.pdb

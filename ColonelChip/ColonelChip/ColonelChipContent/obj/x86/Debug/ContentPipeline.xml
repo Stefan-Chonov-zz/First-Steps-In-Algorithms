@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>MadSoldier.png</Source>
+      <Name>MadSoldier</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\MadSoldier.xnb</Output>
+      <Time>2012-08-11T22:48:33.7339782+03:00</Time>
+    </Item>
+    <Item>
+      <Source>MadSoldier_left.png</Source>
+      <Name>MadSoldier_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\MadSoldier_left.xnb</Output>
+      <Time>2012-08-11T22:48:33.7589796+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Bullets\bullet_left.png</Source>
+      <Name>Bullets\bullet_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Bullets\bullet_left.xnb</Output>
+      <Time>2012-08-12T08:21:00.1472548+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Bullets\bullet_right.png</Source>
+      <Name>Bullets\bullet_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Bullets\bullet_right.xnb</Output>
+      <Time>2012-08-12T08:21:00.1482548+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Enemys\enemyTurnedLeft.png</Source>
+      <Name>Enemys\enemyTurnedLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Enemys\enemyTurnedLeft.xnb</Output>
+      <Time>2012-08-12T09:44:56.0322909+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Enemys\enemyTurnedRight.png</Source>
+      <Name>Enemys\enemyTurnedRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Enemys\enemyTurnedRight.xnb</Output>
+      <Time>2012-08-12T09:44:56.033291+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Others\Step.png</Source>
+      <Name>Others\Step</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Others\Step.xnb</Output>
+      <Time>2012-08-12T11:29:32.7472985+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\Land.png</Source>
+      <Name>Backgrounds\Land</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Backgrounds\Land.xnb</Output>
+      <Time>2012-08-12T11:54:19.9323606+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Others\Step2.png</Source>
+      <Name>Others\Step2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Others\Step2.xnb</Output>
+      <Time>2012-08-12T12:05:28.8026178+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\Background.png</Source>
+      <Name>Backgrounds\Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Backgrounds\Background.xnb</Output>
+      <Time>2012-08-15T10:29:51.1573085+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Bullets\bugBullet.png</Source>
+      <Name>Bullets\bugBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Bullets\bugBullet.xnb</Output>
+      <Time>2012-08-15T13:07:36.9405544+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\ShootingSilencer.wav</Source>
+      <Name>Sounds\ShootingSilencer</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Sounds\ShootingSilencer.xnb</Output>
+      <Time>2012-08-12T11:04:05.6219519+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\EnemyDyingSound.wav</Source>
+      <Name>Sounds\EnemyDyingSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Sounds\EnemyDyingSound.xnb</Output>
+      <Time>2012-08-12T14:24:44.56354+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\shootingBugSound.wav</Source>
+      <Name>Sounds\shootingBugSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\Sounds\shootingBugSound.xnb</Output>
+      <Time>2012-08-15T17:44:20.1766546+03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChepContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChepContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-08-10T15:25:53.1552925+03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

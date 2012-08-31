@@ -1,0 +1,18 @@
+﻿<Window x:Class="RadGridViewWithRadDataPager.RadGridViewWithRadDataPagerWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+				Title="RadGridViewWithRadDataPager" Height="250" Width="350">
+		<Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+            <telerik:RadGridView x:Name="radGridView1" ItemsSource="{Binding PagedSource, ElementName=radDataPager1}"
+                                 CellValidating="radGridView1_CellValidating">
+        </telerik:RadGridView>
+        <telerik:RadDataPager x:Name="radDataPager1" 
+                              DisplayMode = "All"
+                              PageSize="5" Margin="0,184,0,0" Grid.RowSpan="2" />
+    </Grid>
+</Window>

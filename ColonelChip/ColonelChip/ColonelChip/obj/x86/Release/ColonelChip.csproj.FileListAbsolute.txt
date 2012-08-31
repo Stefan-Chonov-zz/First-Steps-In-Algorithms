@@ -1,0 +1,100 @@
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bullet_left.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bullet_right.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Backgrounds\Floor.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Others\Stepper.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Backgrounds\Background.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bugBullet.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedLeftWalking.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRightWalking.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\ShootingSilencer.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\EnemyDyingSound.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\shootingBugSound.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChip.exe.manifest
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChip.application
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChip.exe
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChip.pdb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChip.exe.manifest
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChip.application
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChip.exe
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChip.pdb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Bullets\bullet_left.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Bullets\bullet_right.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Backgrounds\Floor.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Others\Stepper.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Backgrounds\Background.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Bullets\bugBullet.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedLeftWalking.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRightWalking.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Sounds\ShootingSilencer.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Sounds\EnemyDyingSound.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\Content\Sounds\shootingBugSound.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\ColonelChip.exe.manifest
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\ColonelChip.application
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\ColonelChip.exe
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\bin\x86\Release\ColonelChip.pdb
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\obj\x86\Release\ColonelChip.exe.manifest
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\obj\x86\Release\ColonelChip.application
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\obj\x86\Release\ColonelChip.exe
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChep\obj\x86\Release\ColonelChip.pdb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bullet_left.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bullet_right.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Enemys\enemyTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Enemys\enemyTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Backgrounds\Floor.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Others\Stepper.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Backgrounds\Background.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bugBullet.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedLeftWalking.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedRightWalking.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\ShootingSilencer.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\EnemyDyingSound.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\shootingBugSound.xnb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.exe.manifest
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.application
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.exe
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.pdb
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.exe.manifest
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.application
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.exe
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.pdb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bullet_left.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bullet_right.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Enemys\enemyTurnedLeft.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Enemys\enemyTurnedRight.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Backgrounds\Floor.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Others\Stepper.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Backgrounds\Background.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Bullets\bugBullet.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedLeft.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedLeftWalking.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedRight.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Player\PlayerTurnedRightWalking.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\ShootingSilencer.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\EnemyDyingSound.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\Content\Sounds\shootingBugSound.xnb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.exe.manifest
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.application
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.exe
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\bin\x86\Release\ColonelChip.pdb
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.exe.manifest
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.application
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.exe
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChip\obj\x86\Release\ColonelChip.pdb

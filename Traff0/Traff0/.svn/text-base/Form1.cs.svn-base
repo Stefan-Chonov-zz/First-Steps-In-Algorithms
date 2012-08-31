@@ -1,0 +1,462 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Traff0
+{
+    public partial class TrafoForm : Form
+    {
+        public TrafoForm()
+        {
+            InitializeComponent();
+        }
+
+        private void TrafoForm_Load(object sender, EventArgs e)
+        { 
+            this.getWindingsParameterForm = new GetWindingsParametersForm();
+        }
+
+        //private void inductionCheckBox_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (!this.inductionTextBox.Visible)
+        //    {
+        //        this.inductionTextBox.Visible = true;
+        //    }
+        //    else
+        //    {
+        //        this.inductionTextBox.Visible = false;
+        //    }
+        //}
+
+        //private void currentDensityCheckBox_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (!this.currentDensityTextBox.Visible)
+        //    {
+        //        this.currentDensityTextBox.Visible = true;
+        //    }
+        //    else
+        //    {
+        //        this.currentDensityTextBox.Visible = false;
+        //    }
+        //}
+
+        private void secondaryWindingsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            int windings = 0;
+            bool isWindingsAreNumber = int.TryParse(this.secondaryWindingsTextBox.Text, out windings);
+
+            if (isWindingsAreNumber)
+            {
+                if ((windings < 5) && (windings > 0))
+                {
+                    if (this.windingsInfoForm == null)
+                    {
+                        this.getWindingsParameterForm.Size = new Size(this.getWindingsParameterForm.WindowSizes[windings - 1]);
+                        this.getWindingsParameterForm.VoltageTextChanged += new TextChangedHandler(getWindingsParameterForm_VoltageTextChanged);
+                        this.getWindingsParameterForm.AmperageTextChanged += new TextChangedHandler(getWindingsParameterForm_VoltageTextChanged);
+                        this.getWindingsParameterForm.DensityTextChanged += new TextChangedHandler(getWindingsParameterForm_VoltageTextChanged);
+                        this.getWindingsParameterForm.Show();
+
+                        this.windingsInfoForm = new WindingsInfoForm();
+                        this.windingsInfoForm.Show();
+
+                        this.numberOfTurnsInfoLabel.Text = this.secondaryWindingsTextBox.Text;
+                    }
+                    else
+                    {
+                        this.getWindingsParameterForm.Size = new Size(this.getWindingsParameterForm.WindowSizes[windings - 1]);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Моля въведете за брой намотки число по малко от 5 !!!");
+                }
+            }
+            else
+            {
+                if (this.secondaryWindingsTextBox.Text != String.Empty)
+                {
+                    MessageBox.Show("Моля въвеждайте само цифри !!!");
+                }
+            }
+        }
+
+        void getWindingsParameterForm_VoltageTextChanged(object aSender, TextChangedEventArgs aEvent)
+        {
+            TextBox textBox = (TextBox)aSender;
+            string parentName = textBox.Parent.Name;
+
+            if (parentName.Equals("firstSecondaryWindingsUserControl"))
+            {
+                if (textBox.Name.Equals("voltageTextBox"))
+                {
+                    windingsInfoForm.FirstWindingVoltage = aEvent.Voltage;
+                }
+                else if (textBox.Name.Equals("amperageTextBox"))
+                {
+                    this.windingsInfoForm.FirstWindingAmperage = aEvent.Amperage;
+                }
+                else if (textBox.Name.Equals("densityTextBox"))
+                {
+                    this.windingsInfoForm.FirstWindingDensity = aEvent.Density;
+                }
+            }
+            else if (parentName.Equals("secondSecondaryWindingsUserControl"))
+            {
+                if (textBox.Name.Equals("voltageTextBox"))
+                {
+                    windingsInfoForm.SecondWindingVoltage = aEvent.Voltage;
+                }
+                else if (textBox.Name.Equals("amperageTextBox"))
+                {
+                    this.windingsInfoForm.SecondWindingAmperage = aEvent.Amperage;
+                }
+                else if (textBox.Name.Equals("densityTextBox"))
+                {
+                    this.windingsInfoForm.SecondWindingDensity = aEvent.Density;
+                }
+            }
+            else if (parentName.Equals("thirdSecondaryWindingsUserControl"))
+            {
+                if (textBox.Name.Equals("voltageTextBox"))
+                {
+                    windingsInfoForm.ThirdWindingVoltage = aEvent.Voltage;
+                }
+                else if (textBox.Name.Equals("amperageTextBox"))
+                {
+                    this.windingsInfoForm.ThirdWindingAmperage = aEvent.Amperage;
+                }
+                else if (textBox.Name.Equals("densityTextBox"))
+                {
+                    this.windingsInfoForm.ThirdWindingDensity = aEvent.Density;
+                }
+            }
+            else if (parentName.Equals("fourthSecondaryWindingsUserControl"))
+            {
+                if (textBox.Name.Equals("voltageTextBox"))
+                {
+                    windingsInfoForm.FourthWindingVoltage = aEvent.Voltage;
+                }
+                else if (textBox.Name.Equals("amperageTextBox"))
+                {
+                    this.windingsInfoForm.FourthWindingAmperage = aEvent.Amperage;
+                }
+                else if (textBox.Name.Equals("densityTextBox"))
+                {
+                    this.windingsInfoForm.FourthWindingDensity = aEvent.Density;
+                }
+            }
+        }
+
+        private void titleBarLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            pp = new Point(e.X, e.Y);
+            trigger = true;
+        }
+               
+        private void titleBarLabel_MouseUp(object sender, MouseEventArgs e)
+        {
+            trigger = false;
+        }
+
+        private void titleBarLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (trigger)
+            {
+                this.Top += e.Y - pp.Y;
+                this.Left += e.X - pp.X;
+            }
+        }
+
+        private void closeButtonLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
+        private void claculateButtonLabel_Click(object sender, EventArgs e)
+        {
+            SecondaryWindingsVoltageList = new List<string>();
+            SecondaryWindingsAmperageList = new List<string>();
+            SecondaryWindingsDensityList = new List<string>();
+
+            this.section = 0;
+
+            SecondaryWindingsVoltageList.Add(this.getWindingsParameterForm.FirstWindingVoltage);
+            SecondaryWindingsVoltageList.Add(this.getWindingsParameterForm.SecondWindingVoltage);
+            SecondaryWindingsVoltageList.Add(this.getWindingsParameterForm.ThirdWindingVoltage);
+            SecondaryWindingsVoltageList.Add(this.getWindingsParameterForm.FourthWindingVoltage);
+
+            SecondaryWindingsAmperageList.Add(this.getWindingsParameterForm.FirstWindingAmperage);
+            SecondaryWindingsAmperageList.Add(this.getWindingsParameterForm.SecondWindingAmperage);
+            SecondaryWindingsAmperageList.Add(this.getWindingsParameterForm.ThirdWindingAmperage);
+            SecondaryWindingsAmperageList.Add(this.getWindingsParameterForm.FourthWindingAmperage);
+
+            SecondaryWindingsDensityList.Add(this.getWindingsParameterForm.FirstWindingDensity);
+            SecondaryWindingsDensityList.Add(this.getWindingsParameterForm.SecondWindingDensity);
+            SecondaryWindingsDensityList.Add(this.getWindingsParameterForm.ThirdWindingDensity);
+            SecondaryWindingsDensityList.Add(this.getWindingsParameterForm.FourthWindingDensity);
+
+            float voltage = 0.0f;
+            float amperage = 0.0f;
+            float typicalPower = 0.0f;
+            float density = 0.0f;
+            float diameter = 0.0f;
+            bool isVoltageIsFloat = false;
+            bool isAmperageIsFloat = false;
+            bool isDensityIsFloat = false;
+
+            int numberOfTurns = 0;
+            bool isNumber = int.TryParse(this.secondaryWindingsTextBox.Text, out numberOfTurns);
+
+            if (isNumber)
+            {
+                for (int i = 0; i < numberOfTurns; i++)
+                {
+                    isVoltageIsFloat = float.TryParse(this.SecondaryWindingsVoltageList[i], out voltage);
+                    isAmperageIsFloat = float.TryParse(this.SecondaryWindingsAmperageList[i], out amperage);
+
+                    if (isVoltageIsFloat && isAmperageIsFloat)
+                    {
+                        this.section += voltage * amperage; 
+                    }
+                }
+
+                this.section = divideSection(section);
+                typicalPower = section / 0.9f;
+                typicalPower = (float)Math.Round(typicalPower * 100) / 100;
+                this.typicalPowerInfoLabel.Text = typicalPower.ToString();
+                this.sectionInfoLabel.Text = GetMinimalSection(this.section).ToString();
+                this.primarySectionInfoLabel.Text = GetMinimalSection(this.section).ToString();
+                //this.primarySectionTextBox.Visible = true;
+
+                for (int i = 0; i < numberOfTurns; i++)
+                {
+                    isAmperageIsFloat = float.TryParse(this.SecondaryWindingsAmperageList[i], out amperage);
+                    isDensityIsFloat = float.TryParse(this.SecondaryWindingsDensityList[i], out density);
+
+                    if (isAmperageIsFloat && isDensityIsFloat)
+                    {
+                        int index = 0;
+
+                        diameter = CalculateDiameter(amperage, density);
+                        diameter = (float)Math.Round(diameter * 100) / 100;
+                        diameter = GetDiameter(diameter, out index);
+                        this.windingsInfoForm.SecondaryWindingsDiameterList[i].Text = diameter.ToString();
+                    }
+                }
+
+            }
+        }
+
+        float divideSection(float section) 
+        {
+            float result = 0;
+
+            if (section < 50)
+            {
+                result = section / 0.8f;
+            }
+            else if (section < 150)
+            {
+                result = section / 0.85f;
+            }
+            else
+            {
+                result = section / 0.9f;
+            }
+
+            return result;
+        }
+
+        private void primaryVoltageTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (this.windingsInfoForm != null)
+            {
+                //this.windingsInfoForm.PrimaryWindingVoltage = this.primaryVoltageTextBox.Text;
+            }
+
+           // this.voltageInfoLabel.Text = this.primaryVoltageTextBox.Text;
+        }
+
+        private float GetMinimalSection(float section)
+        {
+            float minimalSection = (float)Math.Sqrt(section);
+            minimalSection = (float)Math.Round(minimalSection * 100) / 100;
+
+            return minimalSection;
+        }
+
+        private void claculateButtonLabel_MouseEnter(object sender, EventArgs e)
+        {
+            this.calculateButtonLabel.BackColor = Color.YellowGreen;
+        }
+
+        private void claculateButtonLabel_MouseLeave(object sender, EventArgs e)
+        {
+            this.calculateButtonLabel.BackColor = Color.Orange;
+        }
+             
+        private void typicalPowerInfoLabel_TextChanged(object sender, EventArgs e)
+        {
+            float typicalPower = 0;
+            float voltage = 0;            
+            
+            //bool isFloat = float.TryParse(this.primaryVoltageTextBox.Text, out voltage);
+            
+            //if (isFloat)
+            //{
+            //    typicalPower = this.section / 0.9f;
+            //    typicalPower = (float)Math.Round(typicalPower * 100) / 100;
+            //    float result = (float)Math.Round((typicalPower / voltage) * 100) / 100;
+            //    this.windingsInfoForm.PrimaryWindingAmperage = result.ToString();
+            //}
+
+            // Primary Diameter
+            int index = 0;
+            //this.section = float.Parse(this.primarySectionTextBox.Text);
+            float amperage = float.Parse(this.windingsInfoForm.PrimaryWindingAmperage);
+            float diameter = CalculateDiameter(amperage, this.section);
+            diameter = (float)Math.Round(diameter * 100) / 100;
+            diameter = GetDiameter(diameter, out index);
+            this.windingsInfoForm.PrimaryWindingThicknessOfWire = diameter.ToString();
+
+            CalculateNumberOfTurns();
+        }
+
+        private void CalculateNumberOfTurns()
+        {
+            float voltage = 0.0f;
+            float amperage = 0.0f;
+            float k = 1.0f;
+            float induction = 0.0f;
+            //this.section = float.Parse(this.primarySectionTextBox.Text);
+            //bool isInductionIsFloat = float.TryParse(this.inductionTextBox.Text, out induction);
+            this.windingsInfoForm.PrimaryWindingNumberOfTurns = FormulaForCalculatingTheNumberOfTurns(k, voltage, this.section, induction).ToString();
+
+
+            for (int i = 0; i < int.Parse(this.secondaryWindingsTextBox.Text); i++)
+            {
+                bool isVoltageIsFloat = float.TryParse(this.SecondaryWindingsVoltageList[i], out voltage);
+                bool isAmperageIsFloat = float.TryParse(this.SecondaryWindingsAmperageList[i], out amperage);
+
+                k = 1.05f;//GetK(i);
+
+                this.windingsInfoForm.SecondaryWindingsNumberOfTurnsList[i].Text = FormulaForCalculatingTheNumberOfTurns(k, voltage, this.section, induction).ToString();
+            }
+        }
+
+        private float CalculatePrimaryAmperage(float typicalyPower, float voltage)
+        {
+            float result = typicalyPower / voltage;
+
+            return result;
+        }
+
+        float CalculateDiameter(float amperage, float density)
+        {
+            float result = 0.03558f * (float)Math.Sqrt((amperage * 1000) / density);
+
+            return result;
+        }
+
+        private float GetDiameter(float diameter, out int index)
+        {
+            int length = this.thicknessOfWireDiameter.Count - 1;
+            index = 0;
+            int lastIndex = length;
+ 
+            for (int i = 0; i < this.thicknessOfWireDiameter.Count; i++)
+            {
+                if (this.thicknessOfWireDiameter[i] >= diameter)
+                {
+                    diameter = this.thicknessOfWireDiameter[i];
+                    index = i;
+
+                    break;
+                }
+                else if (diameter > this.thicknessOfWireDiameter[lastIndex])
+                {
+                    MessageBox.Show("Изчисленият диаметър е по-голям от стандартните размери заложени в програмата. Коефицентът на запълване няма да бъде пресмятан !!!");
+                    break;
+                }
+            }
+
+            return diameter;
+        }
+
+        float FormulaForCalculatingTheNumberOfTurns(float k, float voltage, float section, float induction)
+        {
+            return (float)Math.Round((voltage * k) / ((4.44 * 50) * (induction * section)) * 10000) + 1;
+        }
+
+        float GetK(int i)
+        {
+            float k = 0.0f;
+
+            if (i < 0)
+            {
+                k = 1.0f;
+            }
+            if (i >= 0)
+            {
+                k = 1.05f;
+            }
+
+            return k;
+        }
+
+        private GetWindingsParametersForm getWindingsParameterForm;
+        private WindingsInfoForm windingsInfoForm;
+        private Point pp;
+        private bool trigger = false;
+        private float section = 0.0f;
+
+        public List<string> SecondaryWindingsVoltageList = new List<string>();
+        public List<string> SecondaryWindingsAmperageList = new List<string>();
+        public List<string> SecondaryWindingsDensityList = new List<string>();        
+
+        private List<float> thicknessOfWireDiameter = new List<float>
+        {
+            0.04f, 0.05f, 0.06f, 0.07f, 0.08f, 0.09f, 0.10f, 0.11f, 0.12f,
+            0.13f, 0.14f, 0.15f, 0.16f, 0.17f, 0.18f, 0.19f, 0.20f, 0.21f, 0.22f, 0.23f, 0.24f,
+            0.25f, 0.26f, 0.27f, 0.28f, 0.29f, 0.30f, 0.32f, 0.34f, 0.36f, 0.38f, 0.44f, 0.45f,
+            0.50f, 0.55f, 0.60f, 0.65f, 0.70f, 0.75f, 0.80f, 0.85f, 0.90f, 0.95f, 1.00f, 1.04f,
+            1.08f, 1.12f, 1.16f, 1.20f, 1.25f, 1.30f, 1.35f, 1.40f, 1.45f, 1.50f, 1.56f, 1.62f,
+            1.68f, 1.74f, 1.81f, 1.88f, 1.95f, 2.02f
+        };
+
+        private List<int> numberOfTurns = new List<int>
+        {
+            25100, 18500, 12600, 10050, 8200, 6650, 5650, 4500, 3900,
+            3100, 3000, 2720, 2400, 2120, 1940, 1750, 1600, 1420, 1320, 1220, 1130,
+            1050, 960, 900, 850, 800, 750, 650, 580, 520, 470, 430, 335, 280, 225,
+            195, 170, 148, 126, 112, 102, 91, 81, 75, 73, 70, 65, 60, 55, 50, 45,
+            41, 38, 36, 33, 31, 28, 25, 23, 17, 15, 14, 12
+        };
+
+        private void sectionLabelTextBox_Load(object sender, EventArgs e)
+        {
+            this.sectionLabelTextBox.Text = "Моля въведете плътност по голяма от";
+        }
+
+        private void labelTextBox1_Load(object sender, EventArgs e)
+        {
+            this.voltageLabelTextBoxUserControl.Text = "Напрежение (V)";
+        }
+
+        private void optionalParameterUserControl1_Load(object sender, EventArgs e)
+        {
+            this.inductionOptionalParameterUserControl.Message = "Подразбираща се Индукция 1,2";
+        }
+
+        private void optionalParameterUserControl1_Load_1(object sender, EventArgs e)
+        {
+            this.optionalParameterUserControl1.Message = "Препоръчителна плътност на тока 2,55";
+        }
+    }
+}

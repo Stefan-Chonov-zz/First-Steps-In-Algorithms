@@ -1,0 +1,50 @@
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bullet_left.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bullet_right.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedLeft.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedRight.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Backgrounds\Background.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bugBullet.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\ShootingSilencer.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\EnemyDyingSound.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\shootingBugSound.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.exe
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.pdb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.exe
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.pdb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.exe.manifest
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.application
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.exe.manifest
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.application
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Others\Stepper.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Backgrounds\Floor.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRight.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerturnedLeft.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRightWalking.xnb
+C:\Users\Stefoto\Documents\Visual Studio 2010\Projects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedLeftWalking.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bullet_left.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bullet_right.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Enemys\enemyTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Backgrounds\Floor.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Others\Stepper.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Backgrounds\Background.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Bullets\bugBullet.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedLeft.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedLeftWalking.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRight.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Player\PlayerTurnedRightWalking.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\ShootingSilencer.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\EnemyDyingSound.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\Content\Sounds\shootingBugSound.xnb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.exe.manifest
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.application
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.exe
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\bin\x86\Release\ColonelChep.pdb
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.exe.manifest
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.application
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.exe
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChep\obj\x86\Release\ColonelChep.pdb

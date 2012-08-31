@@ -1,0 +1,104 @@
+﻿namespace Traff0
+{
+    partial class OptionalParameterUserControl
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.checkBox = new System.Windows.Forms.CheckBox();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.messageLabel = new System.Windows.Forms.Label();
+            this.inductionBGLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.Location = new System.Drawing.Point(17, 55);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(15, 14);
+            this.checkBox.TabIndex = 23;
+            this.checkBox.UseVisualStyleBackColor = true;
+            this.checkBox.CheckedChanged += new System.EventHandler(this.inductionCheckBox_CheckedChanged);
+            // 
+            // textBox
+            // 
+            this.textBox.BackColor = System.Drawing.Color.DimGray;
+            this.textBox.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox.ForeColor = System.Drawing.Color.Gold;
+            this.textBox.Location = new System.Drawing.Point(71, 49);
+            this.textBox.MaxLength = 4;
+            this.textBox.Name = "textBox";
+            this.textBox.ReadOnly = true;
+            this.textBox.Size = new System.Drawing.Size(47, 26);
+            this.textBox.TabIndex = 22;
+            this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // messageLabel
+            // 
+            this.messageLabel.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.messageLabel.ForeColor = System.Drawing.Color.Gold;
+            this.messageLabel.Location = new System.Drawing.Point(15, 2);
+            this.messageLabel.Name = "messageLabel";
+            this.messageLabel.Size = new System.Drawing.Size(159, 45);
+            this.messageLabel.TabIndex = 21;
+            this.messageLabel.Text = "Message";
+            this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // inductionBGLabel
+            // 
+            this.inductionBGLabel.BackColor = System.Drawing.Color.Black;
+            this.inductionBGLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.inductionBGLabel.Location = new System.Drawing.Point(0, 0);
+            this.inductionBGLabel.Name = "inductionBGLabel";
+            this.inductionBGLabel.Size = new System.Drawing.Size(187, 88);
+            this.inductionBGLabel.TabIndex = 20;
+            // 
+            // OptionalParameterUserControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.checkBox);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.messageLabel);
+            this.Controls.Add(this.inductionBGLabel);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Name = "OptionalParameterUserControl";
+            this.Size = new System.Drawing.Size(187, 88);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.CheckBox checkBox;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Label messageLabel;
+        private System.Windows.Forms.Label inductionBGLabel;
+    }
+}

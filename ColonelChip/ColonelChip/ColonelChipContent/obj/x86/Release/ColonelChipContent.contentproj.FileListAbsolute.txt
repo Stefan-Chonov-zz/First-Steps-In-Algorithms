@@ -1,0 +1,4 @@
+D:\Moe\MyProjects\ColonelChep\ColonelChep\ColonelChepContent\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Moe\MyProjects\ColonelChep\ColonelChip\ColonelChepContent\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Moe\MyProjects\ColonelChip\ColonelChip\ColonelChipContent\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Stefcho\Desktop\My Projects\ColonelChip\ColonelChip\ColonelChipContent\obj\x86\Release\ResolveAssemblyReference.cache

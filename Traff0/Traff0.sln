@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traff0", "Traff0\Traff0.csproj", "{0BD0FE5A-69DE-45BD-B6A0-6D909CF2549E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Traf0_Installer", "Traf0_Installer\Traf0_Installer.vdproj", "{7CB2BA14-77DE-48E4-A5BA-ECA0E4B0025B}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BD0FE5A-69DE-45BD-B6A0-6D909CF2549E}.Debug|x86.ActiveCfg = Debug|x86
+		{0BD0FE5A-69DE-45BD-B6A0-6D909CF2549E}.Debug|x86.Build.0 = Debug|x86
+		{0BD0FE5A-69DE-45BD-B6A0-6D909CF2549E}.Release|x86.ActiveCfg = Release|x86
+		{0BD0FE5A-69DE-45BD-B6A0-6D909CF2549E}.Release|x86.Build.0 = Release|x86
+		{7CB2BA14-77DE-48E4-A5BA-ECA0E4B0025B}.Debug|x86.ActiveCfg = Debug
+		{7CB2BA14-77DE-48E4-A5BA-ECA0E4B0025B}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

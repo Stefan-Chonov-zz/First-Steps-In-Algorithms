@@ -1,0 +1,43 @@
+﻿@model PizzaViki_DAL.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Category</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BackgroundImagePath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BackgroundImagePath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Link)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Link)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

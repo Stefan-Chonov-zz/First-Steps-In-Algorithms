@@ -1,0 +1,151 @@
+﻿@model PizzaVikiMVC4.CategoriesAndPhoneOrders
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+
+@section Menu{
+    <nav>
+	    <section>
+		    <article id="menu">
+			    <ul>
+				    <li>
+					    <a href="/Home/Index/" title="Начало" id="Home" target="_self">Начало</a>
+				    </li>
+				    <li>
+					    <a href="/Home/Index/" target="_self">Меню</a>
+					    <ul>
+                            @foreach (var navMenu in Model.NavigationMenus)
+                            {
+						        <li><a href="@navMenu.Link" title="@navMenu.Title" id="pici" target="_self">@navMenu.Text</a></li>
+                            }
+					    </ul>
+				    </li>
+				    <li>
+					    <a href="/Contacts/Contacts/" title="Контакти" id="Contacts" target="_self">Контакти</a>
+				    </li>
+			    </ul>
+		    </article>
+	    </section>
+    </nav>
+}
+
+
+<article>					
+	<aside class="vertboxleft">
+		<table>
+            @for (int i = 0; i < Model.Categories.Count; i++)
+            {                    
+                <tr>
+					<td>
+						<a href="@Model.Categories[i].Link" title="@Model.Categories[i].Title" class="bodymenu">
+							<img class="image" src="@Model.Categories[i].BackgroundImagePath" alt="pizza"/>
+						</a>
+					</td>
+
+                    @if (i + 1 >= Model.Categories.Count)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        i++;
+                    }
+
+					<td>
+						<a href="@Model.Categories[i].Link" title="@Model.Categories[i].Title" class="bodymenu">
+							<img class="image" src="@Model.Categories[i].BackgroundImagePath" alt="pancakes"/>
+						</a>
+					</td>
+				</tr>                    
+            }	
+		</table>
+	</aside>
+	<aside class="vertboxright">
+		<section>
+			<article>
+				<iframe width="305" height="200" src="http://www.bgmaps.com/link/map/6DD8C608CC9B818F417F519034B790A8"></iframe>
+			</article>
+			<article id="phone_orders">
+				<ul>
+					<li>
+						<h3>Телефони за поръчки</h3>
+					</li>
+                        @foreach (var phone in Model.PhoneOrders)
+                        {
+							<li>
+								<img src="@phone.LogoImage" alt="globul logo" width="18" height="15" />
+								<p class="globul_phone">@phone.OperatorName: @phone.PhoneNumber</p>                        
+							</li>
+                        }
+                    <li>
+                        <br />
+						<p>Доставки от 10:00 до 23:00 часа.</p>
+					</li>
+				</ul>
+			</article>
+			<article id="region_1">
+					<p>За районите: </p>
+					<br/><br/>
+					<div id="region_1_info">
+						<ul>
+							<li>
+								Надежда<br/> 
+							</li>
+							<li>
+								Свобода <br/>
+							</li>
+							<li>
+								Толстой <br/>
+							</li>
+						</ul>
+						<h5>Доставка: 1,50 лв.<br/>
+						Над 10,00 лв. - Безплатна доставка.
+						</h5>
+					</div>
+				<hr/><br/>
+					<p>За районите: </p><br/><br/>
+					<div id="region_2_info">
+						<ul>												
+							<li>
+								Обеля <br/>
+							</li>												
+							<li>
+								Люлин <br/>
+							</li>
+							<li>
+								Илияци<br/> 
+							</li>
+							<li>
+								Банишора <br/>
+							</li>
+							<li>
+								Света Троица <br/>
+							</li>
+							<li>
+								Военна рампа <br/>
+							</li>
+							<li>
+								Захарна фабрика <br/>
+							</li>
+							<li>
+								Модерно предградие <br/>
+							</li>
+						</ul>
+						<h5>
+							Минимална поръчка: 10,00 лв.<br/>
+							Доставка: 1,50 лв.
+						</h5>
+					</div>									
+			</article>
+		</section>
+	</aside>
+</article>
+
+@section Footer{
+    <footer>
+        <div id="footer_text">
+            &copy; 2012 Пицария Вики
+        </div>
+    </footer>
+}

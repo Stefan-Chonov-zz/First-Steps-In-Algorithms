@@ -1,0 +1,459 @@
+body
+{
+    margin: 0px;
+    background: url('Images/Backgrounds/main_background.jpg') center no-repeat;
+	font-family: Verdana;
+	background-position: center top;
+}
+
+h3
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+p
+{
+    font-size: 15px;
+	font-weight: bold;
+    color: white;
+    margin: 0;
+	display: inline;
+}
+
+#catalog_title
+{
+	border-radius: 10px 10px 0 0; 	
+    background: url(Images/Backgrounds/transparent_texture_background.png) repeat;
+	width: 320px;
+	text-align: center;
+	font-size: 50px;
+	color: #006D8E;
+	padding: 10px 10px 0 10px;
+	margin-left: 33%;	
+}
+
+#pizza_title_bg
+{
+	width: 74%;
+	background: url(Images/CategoryTitles/pizzaTitleBG.jpg) no-repeat;
+	border-radius: 10px 10px 0 0;
+	text-align: right;
+	padding-right: 84px;
+}
+
+#logo
+{
+	background: url('Images/Others/logo_background.png');
+	width: 450px;
+	height: 90px;
+	border-radius:10px 10px 0 0;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	margin-top: 10px;
+	z-index:2;
+}
+
+table
+{
+    margin: 0 auto;
+}
+
+tr,td
+{
+    /*padding: 2px;*/
+}
+
+#wrapper
+{
+   width: 1000px;
+   margin: 0 auto;
+}
+
+header
+{
+    width: 100%;
+	height: 200px;
+    background-image: url(Images/Headers/main_header.jpg);    
+    border-radius: 10px;	
+	z-index:1;
+	margin-top:-7px;
+	border-top: 1px solid #000;
+}
+
+.header_Contacts
+{
+	float: left;
+    background-image: url('Images/Backgrounds/transparent_texture_background.png') ;
+	padding: 15px 150px 15px 15px;
+	border-radius: 0px 10px 10px 0px;
+	margin-top: 5%;
+}
+
+#menu
+{
+    width: 100%;
+    display: inline-block;
+    background-image: url(Images/Backgrounds/middleBG.png);
+    border-radius: 10px;
+	margin: 15px 0 15px 0;
+	padding: 7px 0 7px 0;
+}
+
+.clear
+{
+	clear: both;
+}
+
+ul
+{
+	list-style-type: none;
+	text-align: left;
+}
+
+nav ul
+{    
+    padding-left: 25%;
+	margin:0px;
+}
+
+nav li a
+{
+    text-decoration: none;
+    background-image:url(Images/Others/nice_button.png);
+    width: 150px;
+    height: 29px;
+    text-align: center;
+    padding-top: 5px;
+    margin-left: 10px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+nav li, nav li a
+{
+    float: left;
+}
+
+nav li
+{
+    position: relative;
+}
+
+nav li ul
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+nav li:hover > ul
+{
+    display: block;
+    top: 100%;
+}
+
+nav a:hover, nav a:active
+{
+    background-image: url(Images/Others/NiceButtonOver.png);    
+}
+
+#body
+{
+	width: 990px;
+    display: inline-block;
+    background-image: url(Images/Backgrounds/transparent_texture_background.png); 
+    border-radius: 10px;
+	padding: 0px 5px 15px 5px;	
+}
+
+.vertboxright
+{
+    width: 305px;
+    float: left;
+	margin: 17px 0 0 5px;	
+}
+
+#phone_orders
+{
+	background: #006D8E;
+	border-radius: 5px;
+	margin-top:  2%;
+	padding: 5%;
+	border: 3px solid #004D63;
+	height: 182px;
+	word-wrap: break-word;
+}
+
+#region_1
+{
+	background: #E99906;
+	border-radius: 5px;
+	border: 3px solid #B57405;
+	margin-top: 3%;
+	padding:5%;
+	text-align: center;	
+	height: 500px;
+}
+
+#region_1 p
+{
+	color: #000;
+}
+
+#region_1_info
+{
+	text-align: center;	
+}
+
+#region_1_info ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#region_1_info ul li
+{
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#region_2_info ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#region_2_info ul li
+{
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;	
+}
+
+iframe
+{
+	border: 0;
+	scrolling: yes;
+}
+
+.vertboxright ul
+{
+	padding-left: 5%;
+	text-align: left;
+}
+
+.globul_phone
+{
+	margin-left:10px;
+}
+
+.vivacom_phone
+{
+	margin-left:10px;
+}
+
+.vertboxleft
+{
+    background-image: url(Images/Backgrounds/transparent_texture_background.png);
+    float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin: 15px 5px 0 5px;
+}
+
+fieldset
+{
+	width: 315px;
+	height: 315px;
+	/*margin: 10px 0 0 0;*/
+	padding: 0px;
+	border-radius: 5px;
+	border: 0px;
+}
+
+fieldset legend
+{
+	text-align: center;
+	font-weight: bold;
+	font-size:16px;
+	width: 110px;
+	height:20px;
+	background: #FFF;
+	border-radius: 5px;
+	color: #006D8E;
+}
+
+.product_ingredients
+{
+	margin: 5% 0 5% 57%;
+	padding-top: 5%;	
+}
+
+footer
+{
+    width: 1000px;
+    height: 40px;
+    background-image: url(Images/Backgrounds/transparent_texture_background.png);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#footer_text
+{
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.image
+{
+    width:326px;
+    height:192px;
+}
+
+.bodymenu
+{
+    width:326px;
+    height:192px;
+    display: block;
+}
+
+.bodymenu:hover
+{
+    background-color: #000;
+    opacity: 0.7;
+}
+
+/* ############################################## */
+/* ############# Pizza Style #################### */
+/* ############################################## */
+
+#pizzas_main_body
+{
+    margin: 0px;
+    background: url('Images/Backgrounds/pizzas_background.jpg') center no-repeat;
+	font-family: Verdana;
+	background-position: center top;
+}
+
+/* ############################################## 
+   ############# Pancakes Style #################
+   ############################################## */
+
+#pancakes_header
+{
+	background-image: url('Images/Headers/pancakes_header.jpg');
+}
+
+#pancakes_main_body
+{
+    margin: 0px;
+	background-image: url('Images/Backgrounds/pancakes_background.jpg');
+	font-family: Verdana;
+	background-position: center top;
+}
+
+#pancakes_catalog_title
+{
+	border-radius: 10px 10px 0 0; 	
+    background: url(Images/Backgrounds/transparent_texture_background.png) repeat;
+	width: 450px;	
+	text-align: center;
+	color: #006D8E;
+	padding: 7px 7px 0 7px;
+	margin-left: 27%;	
+}
+
+.catalog_title_font_size
+{
+	font-size: 52px;
+}
+
+#pancakes_title_bg
+{
+	background-image: url('Images/CategoryTitles/pancakesTitleBG.jpg');
+	height: 70px;
+	padding: 15px 0 0 25px;
+	border-radius: 5px;
+}
+
+/* ############################################## 
+   ############# Contacts Style #################
+   ############################################## */
+   
+#contacts_left_side
+{
+    float: left;
+}
+
+#contacts_right_side
+{
+    float: left;
+    width: 470px
+}
+   
+#map
+{
+    float: left;
+    margin: 15px 0 0 10px;
+}
+
+#address_container
+{
+    background: url('Images/Backgrounds/PhysicalAddress.jpg'); /*#E99906;*/
+	border-radius: 5px;
+	border: 3px solid #B57405;
+	padding:1%;
+	text-align: center;	
+	height: 180px;	
+	margin: 15px 0 10px 10px;
+}
+
+#address_title
+{
+    font-size: 18px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+#address
+{
+    font-size: 14px;
+	font-weight: bold;
+}
+
+#phoneOrders_contacts_header
+{
+    text-align: center;    
+}
+
+#phone_orders_contacts
+{
+    height: 180px;
+    background: #006D8E;
+	border-radius: 5px;
+	margin: 10px 0 0 10px;
+	padding: 1%;
+	border: 3px solid #004D63;	
+	word-wrap: break-word;	
+}
+
+#phoneOrders_contacts_footer
+{
+    text-align: center;
+}
+
+#phone_orders_contacts ul li img
+{
+    float:left;
+    margin-left: 17%;
+}

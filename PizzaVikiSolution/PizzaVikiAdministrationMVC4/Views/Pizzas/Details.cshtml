@@ -1,0 +1,71 @@
+﻿@model PizzaViki_DAL.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BackgroundImagePath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BackgroundImagePath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ingredients)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ingredients)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LowestPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LowestPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AveragePrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AveragePrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HighestPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HighestPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Weight)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Weight)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

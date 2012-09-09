@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{C7E97393-0FE8-4898-84D0-EB9F0198A1ED}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Moe\MyProjects\Pizza Viki\index.html = D:\Moe\MyProjects\Pizza Viki\index.html
+		D:\Moe\MyProjects\Pizza Viki\pancakes.html = D:\Moe\MyProjects\Pizza Viki\pancakes.html
+		D:\Moe\MyProjects\Pizza Viki\pizzas.html = D:\Moe\MyProjects\Pizza Viki\pizzas.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{09A43C83-8DAB-4B17-95D9-F94C627DF157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaViki_DAL", "PizzaViki_DAL\PizzaViki_DAL.csproj", "{3E01CB38-98C7-46CD-8704-35CB7A21D09F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaVikiMVC4", "PizzaVikiMVC4\PizzaVikiMVC4.csproj", "{4D1CEAE1-EA1E-419E-95E2-24564FF45F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaVikiAdministrationMVC4", "PizzaVikiAdministrationMVC4\PizzaVikiAdministrationMVC4.csproj", "{0DB64A81-7153-4D47-BC58-538E96DAF617}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E01CB38-98C7-46CD-8704-35CB7A21D09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E01CB38-98C7-46CD-8704-35CB7A21D09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E01CB38-98C7-46CD-8704-35CB7A21D09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E01CB38-98C7-46CD-8704-35CB7A21D09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1CEAE1-EA1E-419E-95E2-24564FF45F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1CEAE1-EA1E-419E-95E2-24564FF45F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1CEAE1-EA1E-419E-95E2-24564FF45F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1CEAE1-EA1E-419E-95E2-24564FF45F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB64A81-7153-4D47-BC58-538E96DAF617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB64A81-7153-4D47-BC58-538E96DAF617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB64A81-7153-4D47-BC58-538E96DAF617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB64A81-7153-4D47-BC58-538E96DAF617}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09A43C83-8DAB-4B17-95D9-F94C627DF157} = {C7E97393-0FE8-4898-84D0-EB9F0198A1ED}
+	EndGlobalSection
+EndGlobal

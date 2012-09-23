@@ -123,9 +123,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CategoriesViewStylesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NavigationMenusController.cs" />
-    <Compile Include="Controllers\PizzasController.cs" />
+    <Compile Include="Controllers\PhoneOrdersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,16 +243,21 @@
     <Content Include="Views\Categories\Create.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Delete.cshtml" />
-    <Content Include="Views\Pizzas\Index.cshtml" />
-    <Content Include="Views\Pizzas\Details.cshtml" />
-    <Content Include="Views\Pizzas\Create.cshtml" />
-    <Content Include="Views\Pizzas\Edit.cshtml" />
-    <Content Include="Views\Pizzas\Delete.cshtml" />
-    <Content Include="Views\NavigationMenus\Index.cshtml" />
-    <Content Include="Views\NavigationMenus\Details.cshtml" />
-    <Content Include="Views\NavigationMenus\Create.cshtml" />
-    <Content Include="Views\NavigationMenus\Edit.cshtml" />
-    <Content Include="Views\NavigationMenus\Delete.cshtml" />
+    <Content Include="Views\PhoneOrders\Index.cshtml" />
+    <Content Include="Views\PhoneOrders\Details.cshtml" />
+    <Content Include="Views\PhoneOrders\Create.cshtml" />
+    <Content Include="Views\PhoneOrders\Edit.cshtml" />
+    <Content Include="Views\PhoneOrders\Delete.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\CategoriesViewStyles\Index.cshtml" />
+    <Content Include="Views\CategoriesViewStyles\Details.cshtml" />
+    <Content Include="Views\CategoriesViewStyles\Create.cshtml" />
+    <Content Include="Views\CategoriesViewStyles\Edit.cshtml" />
+    <Content Include="Views\CategoriesViewStyles\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -269,7 +275,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>8907</DevelopmentServerPort>
+          <DevelopmentServerPort>57136</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

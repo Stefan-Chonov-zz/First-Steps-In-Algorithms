@@ -14,6 +14,12 @@ h3
     color: #FFF;
 }
 
+h5
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+
 p
 {
     font-size: 15px;
@@ -27,26 +33,24 @@ p
 {
 	border-radius: 10px 10px 0 0; 	
     background: url(Images/Backgrounds/transparent_texture_background.png) repeat;
-	width: 320px;
+	width: 480px;
 	text-align: center;
 	font-size: 50px;
 	color: #006D8E;
 	padding: 10px 10px 0 10px;
-	margin-left: 33%;	
+	margin-left: 25%;	
 }
 
-#pizza_title_bg
+#category_title_bg
 {
-	width: 74%;
 	background: url(Images/CategoryTitles/pizzaTitleBG.jpg) no-repeat;
 	border-radius: 10px 10px 0 0;
-	text-align: right;
-	padding-right: 84px;
+	height: 68px;
 }
 
 #logo
 {
-	background: url('Images/Others/logo_background.png');
+	background: url('Images/Others/logo_background.jpg');
 	width: 450px;
 	height: 90px;
 	border-radius:10px 10px 0 0;
@@ -62,9 +66,9 @@ table
     margin: 0 auto;
 }
 
-tr,td
+tr
 {
-    /*padding: 2px;*/
+   margin-top: 5px;
 }
 
 #wrapper
@@ -125,7 +129,7 @@ nav li a
     text-decoration: none;
     background-image:url(Images/Others/nice_button.png);
     width: 150px;
-    height: 29px;
+    height: 28px;
     text-align: center;
     padding-top: 5px;
     margin-left: 10px;
@@ -186,7 +190,6 @@ nav a:hover, nav a:active
 	margin-top:  2%;
 	padding: 5%;
 	border: 3px solid #004D63;
-	height: 182px;
 	word-wrap: break-word;
 }
 
@@ -198,7 +201,6 @@ nav a:hover, nav a:active
 	margin-top: 3%;
 	padding:5%;
 	text-align: center;	
-	height: 500px;
 }
 
 #region_1 p
@@ -270,30 +272,29 @@ iframe
 
 fieldset
 {
-	width: 315px;
-	height: 315px;
-	/*margin: 10px 0 0 0;*/
-	padding: 0px;
+	width: 305px;
+	height: 325px;
+	margin-top: 10px;
+	padding: 5px;
 	border-radius: 5px;
 	border: 0px;
 }
 
 fieldset legend
 {
-	text-align: center;
+    text-align: center;
 	font-weight: bold;
-	font-size:16px;
-	width: 110px;
-	height:20px;
-	background: #FFF;
+	font-size:17px;
+	width: 160px;
+	height:45px;
+	background: #8DC600;/*#E99906;*/
 	border-radius: 5px;
-	color: #006D8E;
+	color: #000;/*#006D8E;*/
 }
 
 .product_ingredients
 {
-	margin: 5% 0 5% 57%;
-	padding-top: 5%;	
+	margin: 2% 0 0 55%;
 }
 
 footer
@@ -331,18 +332,6 @@ footer
 {
     background-color: #000;
     opacity: 0.7;
-}
-
-/* ############################################## */
-/* ############# Pizza Style #################### */
-/* ############################################## */
-
-#pizzas_main_body
-{
-    margin: 0px;
-    background: url('Images/Backgrounds/pizzas_background.jpg') center no-repeat;
-	font-family: Verdana;
-	background-position: center top;
 }
 
 /* ############################################## 
@@ -438,7 +427,6 @@ footer
 
 #phone_orders_contacts
 {
-    height: 180px;
     background: #006D8E;
 	border-radius: 5px;
 	margin: 10px 0 0 10px;
@@ -456,4 +444,5 @@ footer
 {
     float:left;
     margin-left: 17%;
+    border: 0px;
 }

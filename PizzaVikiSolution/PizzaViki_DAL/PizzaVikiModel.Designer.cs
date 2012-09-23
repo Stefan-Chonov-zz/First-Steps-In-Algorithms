@@ -18,9 +18,11 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Category", "Category", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PizzaViki_DAL.Category), "MainTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.MainTable), true)]
-[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_Product_Category1", "Category", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(PizzaViki_DAL.Category), "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.Product), true)]
-[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_MainTable_NavigationMenu1", "NavigationMenu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PizzaViki_DAL.NavigationMenu), "MainTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.MainTable), true)]
+[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Areas", "Areas", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PizzaViki_DAL.Area), "MainTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.MainTable), true)]
+[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_SubAreas_Areas", "Areas", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PizzaViki_DAL.Area), "SubAreas", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.SubArea), true)]
+[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_CategoriesViewStyles_Category", "Categories", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(PizzaViki_DAL.Category), "CategoriesViewStyles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.CategoryViewStyle), true)]
+[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Category1", "Categories", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PizzaViki_DAL.Category), "MainTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.MainTable), true)]
+[assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_Product_Category", "Categories", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(PizzaViki_DAL.Category), "Products", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.Product), true)]
 [assembly: EdmRelationshipAttribute("PizzaVikiCategoriesModel", "FK_MainTable_PhoneOrders", "PhoneOrders", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PizzaViki_DAL.PhoneOrder), "MainTable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PizzaViki_DAL.MainTable), true)]
 
 #endregion
@@ -76,6 +78,22 @@ namespace PizzaViki_DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Area> Areas
+        {
+            get
+            {
+                if ((_Areas == null))
+                {
+                    _Areas = base.CreateObjectSet<Area>("Areas");
+                }
+                return _Areas;
+            }
+        }
+        private ObjectSet<Area> _Areas;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Category> Categories
         {
             get
@@ -92,6 +110,22 @@ namespace PizzaViki_DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<CategoryViewStyle> CategoriesViewStyles
+        {
+            get
+            {
+                if ((_CategoriesViewStyles == null))
+                {
+                    _CategoriesViewStyles = base.CreateObjectSet<CategoryViewStyle>("CategoriesViewStyles");
+                }
+                return _CategoriesViewStyles;
+            }
+        }
+        private ObjectSet<CategoryViewStyle> _CategoriesViewStyles;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<MainTable> MainTables
         {
             get
@@ -104,22 +138,6 @@ namespace PizzaViki_DAL
             }
         }
         private ObjectSet<MainTable> _MainTables;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<NavigationMenu> NavigationMenus
-        {
-            get
-            {
-                if ((_NavigationMenus == null))
-                {
-                    _NavigationMenus = base.CreateObjectSet<NavigationMenu>("NavigationMenus");
-                }
-                return _NavigationMenus;
-            }
-        }
-        private ObjectSet<NavigationMenu> _NavigationMenus;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -152,9 +170,33 @@ namespace PizzaViki_DAL
             }
         }
         private ObjectSet<Product> _Products;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<SubArea> SubAreas
+        {
+            get
+            {
+                if ((_SubAreas == null))
+                {
+                    _SubAreas = base.CreateObjectSet<SubArea>("SubAreas");
+                }
+                return _SubAreas;
+            }
+        }
+        private ObjectSet<SubArea> _SubAreas;
 
         #endregion
         #region AddTo Methods
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Areas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAreas(Area area)
+        {
+            base.AddObject("Areas", area);
+        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the Categories EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -165,19 +207,19 @@ namespace PizzaViki_DAL
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the CategoriesViewStyles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCategoriesViewStyles(CategoryViewStyle categoriesViewStyle)
+        {
+            base.AddObject("CategoriesViewStyles", categoriesViewStyle);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the MainTables EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToMainTables(MainTable mainTable)
         {
             base.AddObject("MainTables", mainTable);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the NavigationMenus EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToNavigationMenus(NavigationMenu navigationMenu)
-        {
-            base.AddObject("NavigationMenus", navigationMenu);
         }
     
         /// <summary>
@@ -195,6 +237,14 @@ namespace PizzaViki_DAL
         {
             base.AddObject("Products", product);
         }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the SubAreas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToSubAreas(SubArea subArea)
+        {
+            base.AddObject("SubAreas", subArea);
+        }
 
         #endregion
     }
@@ -203,6 +253,330 @@ namespace PizzaViki_DAL
     #endregion
     
     #region Entities
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="PizzaVikiCategoriesModel", Name="Area")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Area : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Area object.
+        /// </summary>
+        /// <param name="id">Initial value of the id property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        public static Area CreateArea(global::System.Int32 id, global::System.String name)
+        {
+            Area area = new Area();
+            area.id = id;
+            area.Name = name;
+            return area;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Areas", "MainTable")]
+        public EntityCollection<MainTable> MainTables
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_Areas", "MainTable");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_Areas", "MainTable", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_SubAreas_Areas", "SubAreas")]
+        public EntityCollection<SubArea> SubAreas
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SubArea>("PizzaVikiCategoriesModel.FK_SubAreas_Areas", "SubAreas");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SubArea>("PizzaVikiCategoriesModel.FK_SubAreas_Areas", "SubAreas", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="PizzaVikiCategoriesModel", Name="CategoriesViewStyle")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CategoryViewStyle : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new CategoriesViewStyle object.
+        /// </summary>
+        /// <param name="id">Initial value of the id property.</param>
+        /// <param name="backgroundImagePath">Initial value of the BackgroundImagePath property.</param>
+        /// <param name="headerBackgroundImagePath">Initial value of the HeaderBackgroundImagePath property.</param>
+        public static CategoryViewStyle CreateCategoriesViewStyle(global::System.Int32 id, global::System.String backgroundImagePath, global::System.String headerBackgroundImagePath)
+        {
+            CategoryViewStyle categoriesViewStyle = new CategoryViewStyle();
+            categoriesViewStyle.id = id;
+            categoriesViewStyle.BackgroundImagePath = backgroundImagePath;
+            categoriesViewStyle.HeaderBackgroundImagePath = headerBackgroundImagePath;
+            return categoriesViewStyle;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String BackgroundImagePath
+        {
+            get
+            {
+                return _BackgroundImagePath;
+            }
+            set
+            {
+                OnBackgroundImagePathChanging(value);
+                ReportPropertyChanging("BackgroundImagePath");
+                _BackgroundImagePath = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("BackgroundImagePath");
+                OnBackgroundImagePathChanged();
+            }
+        }
+        private global::System.String _BackgroundImagePath;
+        partial void OnBackgroundImagePathChanging(global::System.String value);
+        partial void OnBackgroundImagePathChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String HeaderBackgroundImagePath
+        {
+            get
+            {
+                return _HeaderBackgroundImagePath;
+            }
+            set
+            {
+                OnHeaderBackgroundImagePathChanging(value);
+                ReportPropertyChanging("HeaderBackgroundImagePath");
+                _HeaderBackgroundImagePath = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("HeaderBackgroundImagePath");
+                OnHeaderBackgroundImagePathChanged();
+            }
+        }
+        private global::System.String _HeaderBackgroundImagePath;
+        partial void OnHeaderBackgroundImagePathChanging(global::System.String value);
+        partial void OnHeaderBackgroundImagePathChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CategoryID
+        {
+            get
+            {
+                return _CategoryID;
+            }
+            set
+            {
+                OnCategoryIDChanging(value);
+                ReportPropertyChanging("CategoryID");
+                _CategoryID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CategoryID");
+                OnCategoryIDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CategoryID;
+        partial void OnCategoryIDChanging(Nullable<global::System.Int32> value);
+        partial void OnCategoryIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CategoryTitleImage
+        {
+            get
+            {
+                return _CategoryTitleImage;
+            }
+            set
+            {
+                OnCategoryTitleImageChanging(value);
+                ReportPropertyChanging("CategoryTitleImage");
+                _CategoryTitleImage = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CategoryTitleImage");
+                OnCategoryTitleImageChanged();
+            }
+        }
+        private global::System.String _CategoryTitleImage;
+        partial void OnCategoryTitleImageChanging(global::System.String value);
+        partial void OnCategoryTitleImageChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_CategoriesViewStyles_Category", "Categories")]
+        public Category Category
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category", "Categories").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category", "Categories").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Category> CategoryReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category", "Categories");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category", "Categories", value);
+                }
+            }
+        }
+
+        #endregion
+    }
     
     /// <summary>
     /// No Metadata Documentation available.
@@ -369,18 +743,18 @@ namespace PizzaViki_DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Category", "MainTable")]
-        public EntityCollection<MainTable> MainTables
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_CategoriesViewStyles_Category", "CategoriesViewStyles")]
+        public EntityCollection<CategoryViewStyle> CategoriesViewStyles
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_Category", "MainTable");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CategoryViewStyle>("PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category", "CategoriesViewStyles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_Category", "MainTable", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CategoryViewStyle>("PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category", "CategoriesViewStyles", value);
                 }
             }
         }
@@ -391,18 +765,40 @@ namespace PizzaViki_DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_Product_Category1", "Product")]
-        public EntityCollection<Product> Products
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Category1", "MainTable")]
+        public EntityCollection<MainTable> MainTables
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Product>("PizzaVikiCategoriesModel.FK_Product_Category1", "Product");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_Category1", "MainTable");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Product>("PizzaVikiCategoriesModel.FK_Product_Category1", "Product", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_Category1", "MainTable", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_Product_Category", "Products")]
+        public EntityCollection<Product> Products
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Product>("PizzaVikiCategoriesModel.FK_Product_Category", "Products");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Product>("PizzaVikiCategoriesModel.FK_Product_Category", "Products", value);
                 }
             }
         }
@@ -425,15 +821,17 @@ namespace PizzaViki_DAL
         /// </summary>
         /// <param name="id">Initial value of the id property.</param>
         /// <param name="categoryID">Initial value of the CategoryID property.</param>
-        /// <param name="navigationMenu">Initial value of the NavigationMenu property.</param>
+        /// <param name="categoriesViewStylesID">Initial value of the CategoriesViewStylesID property.</param>
         /// <param name="phoneOrders">Initial value of the PhoneOrders property.</param>
-        public static MainTable CreateMainTable(global::System.Int32 id, global::System.Int32 categoryID, global::System.Int32 navigationMenu, global::System.Int32 phoneOrders)
+        /// <param name="areaID">Initial value of the AreaID property.</param>
+        public static MainTable CreateMainTable(global::System.Int32 id, global::System.Int32 categoryID, global::System.Int32 categoriesViewStylesID, global::System.Int32 phoneOrders, global::System.Int32 areaID)
         {
             MainTable mainTable = new MainTable();
             mainTable.id = id;
             mainTable.CategoryID = categoryID;
-            mainTable.NavigationMenu = navigationMenu;
+            mainTable.CategoriesViewStylesID = categoriesViewStylesID;
             mainTable.PhoneOrders = phoneOrders;
+            mainTable.AreaID = areaID;
             return mainTable;
         }
 
@@ -496,24 +894,24 @@ namespace PizzaViki_DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 NavigationMenu
+        public global::System.Int32 CategoriesViewStylesID
         {
             get
             {
-                return _NavigationMenu;
+                return _CategoriesViewStylesID;
             }
             set
             {
-                OnNavigationMenuChanging(value);
-                ReportPropertyChanging("NavigationMenu");
-                _NavigationMenu = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("NavigationMenu");
-                OnNavigationMenuChanged();
+                OnCategoriesViewStylesIDChanging(value);
+                ReportPropertyChanging("CategoriesViewStylesID");
+                _CategoriesViewStylesID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CategoriesViewStylesID");
+                OnCategoriesViewStylesIDChanged();
             }
         }
-        private global::System.Int32 _NavigationMenu;
-        partial void OnNavigationMenuChanging(global::System.Int32 value);
-        partial void OnNavigationMenuChanged();
+        private global::System.Int32 _CategoriesViewStylesID;
+        partial void OnCategoriesViewStylesIDChanging(global::System.Int32 value);
+        partial void OnCategoriesViewStylesIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -538,6 +936,30 @@ namespace PizzaViki_DAL
         private global::System.Int32 _PhoneOrders;
         partial void OnPhoneOrdersChanging(global::System.Int32 value);
         partial void OnPhoneOrdersChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 AreaID
+        {
+            get
+            {
+                return _AreaID;
+            }
+            set
+            {
+                OnAreaIDChanging(value);
+                ReportPropertyChanging("AreaID");
+                _AreaID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AreaID");
+                OnAreaIDChanged();
+            }
+        }
+        private global::System.Int32 _AreaID;
+        partial void OnAreaIDChanging(global::System.Int32 value);
+        partial void OnAreaIDChanged();
 
         #endregion
     
@@ -549,16 +971,54 @@ namespace PizzaViki_DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Category", "Category")]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Areas", "Areas")]
+        public Area Area
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Area>("PizzaVikiCategoriesModel.FK_MainTable_Areas", "Areas").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Area>("PizzaVikiCategoriesModel.FK_MainTable_Areas", "Areas").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Area> AreaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Area>("PizzaVikiCategoriesModel.FK_MainTable_Areas", "Areas");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Area>("PizzaVikiCategoriesModel.FK_MainTable_Areas", "Areas", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_Category1", "Categories")]
         public Category Category
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category", "Category").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category1", "Categories").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category", "Category").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category1", "Categories").Value = value;
             }
         }
         /// <summary>
@@ -570,51 +1030,13 @@ namespace PizzaViki_DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category", "Category");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category1", "Categories");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category", "Category", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_NavigationMenu1", "NavigationMenu")]
-        public NavigationMenu NavigationMenu1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NavigationMenu>("PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1", "NavigationMenu").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NavigationMenu>("PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1", "NavigationMenu").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<NavigationMenu> NavigationMenu1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NavigationMenu>("PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1", "NavigationMenu");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<NavigationMenu>("PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1", "NavigationMenu", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("PizzaVikiCategoriesModel.FK_MainTable_Category1", "Categories", value);
                 }
             }
         }
@@ -663,164 +1085,6 @@ namespace PizzaViki_DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PizzaVikiCategoriesModel", Name="NavigationMenu")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class NavigationMenu : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new NavigationMenu object.
-        /// </summary>
-        /// <param name="id">Initial value of the id property.</param>
-        /// <param name="title">Initial value of the Title property.</param>
-        /// <param name="link">Initial value of the Link property.</param>
-        /// <param name="text">Initial value of the Text property.</param>
-        public static NavigationMenu CreateNavigationMenu(global::System.Int32 id, global::System.String title, global::System.String link, global::System.String text)
-        {
-            NavigationMenu navigationMenu = new NavigationMenu();
-            navigationMenu.id = id;
-            navigationMenu.Title = title;
-            navigationMenu.Link = link;
-            navigationMenu.Text = text;
-            return navigationMenu;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                if (_id != value)
-                {
-                    OnidChanging(value);
-                    ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("id");
-                    OnidChanged();
-                }
-            }
-        }
-        private global::System.Int32 _id;
-        partial void OnidChanging(global::System.Int32 value);
-        partial void OnidChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Title
-        {
-            get
-            {
-                return _Title;
-            }
-            set
-            {
-                OnTitleChanging(value);
-                ReportPropertyChanging("Title");
-                _Title = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Title");
-                OnTitleChanged();
-            }
-        }
-        private global::System.String _Title;
-        partial void OnTitleChanging(global::System.String value);
-        partial void OnTitleChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Link
-        {
-            get
-            {
-                return _Link;
-            }
-            set
-            {
-                OnLinkChanging(value);
-                ReportPropertyChanging("Link");
-                _Link = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Link");
-                OnLinkChanged();
-            }
-        }
-        private global::System.String _Link;
-        partial void OnLinkChanging(global::System.String value);
-        partial void OnLinkChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Text
-        {
-            get
-            {
-                return _Text;
-            }
-            set
-            {
-                OnTextChanging(value);
-                ReportPropertyChanging("Text");
-                _Text = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Text");
-                OnTextChanged();
-            }
-        }
-        private global::System.String _Text;
-        partial void OnTextChanging(global::System.String value);
-        partial void OnTextChanged();
-
-        #endregion
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_MainTable_NavigationMenu1", "MainTable")]
-        public EntityCollection<MainTable> MainTables
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1", "MainTable");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MainTable>("PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1", "MainTable", value);
-                }
-            }
-        }
-
-        #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="PizzaVikiCategoriesModel", Name="PhoneOrder")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -833,14 +1097,12 @@ namespace PizzaViki_DAL
         /// </summary>
         /// <param name="id">Initial value of the id property.</param>
         /// <param name="operatorName">Initial value of the OperatorName property.</param>
-        /// <param name="logoImage">Initial value of the LogoImage property.</param>
         /// <param name="phoneNumber">Initial value of the PhoneNumber property.</param>
-        public static PhoneOrder CreatePhoneOrder(global::System.Int32 id, global::System.String operatorName, global::System.String logoImage, global::System.String phoneNumber)
+        public static PhoneOrder CreatePhoneOrder(global::System.Int32 id, global::System.String operatorName, global::System.String phoneNumber)
         {
             PhoneOrder phoneOrder = new PhoneOrder();
             phoneOrder.id = id;
             phoneOrder.OperatorName = operatorName;
-            phoneOrder.LogoImage = logoImage;
             phoneOrder.PhoneNumber = phoneNumber;
             return phoneOrder;
         }
@@ -902,7 +1164,7 @@ namespace PizzaViki_DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String LogoImage
         {
@@ -914,7 +1176,7 @@ namespace PizzaViki_DAL
             {
                 OnLogoImageChanging(value);
                 ReportPropertyChanging("LogoImage");
-                _LogoImage = StructuralObject.SetValidValue(value, false);
+                _LogoImage = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("LogoImage");
                 OnLogoImageChanged();
             }
@@ -1108,7 +1370,7 @@ namespace PizzaViki_DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Double> LowestPrice
+        public global::System.String LowestPrice
         {
             get
             {
@@ -1118,13 +1380,13 @@ namespace PizzaViki_DAL
             {
                 OnLowestPriceChanging(value);
                 ReportPropertyChanging("LowestPrice");
-                _LowestPrice = StructuralObject.SetValidValue(value);
+                _LowestPrice = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("LowestPrice");
                 OnLowestPriceChanged();
             }
         }
-        private Nullable<global::System.Double> _LowestPrice;
-        partial void OnLowestPriceChanging(Nullable<global::System.Double> value);
+        private global::System.String _LowestPrice;
+        partial void OnLowestPriceChanging(global::System.String value);
         partial void OnLowestPriceChanged();
     
         /// <summary>
@@ -1132,7 +1394,7 @@ namespace PizzaViki_DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Double> AveragePrice
+        public global::System.String AveragePrice
         {
             get
             {
@@ -1142,13 +1404,13 @@ namespace PizzaViki_DAL
             {
                 OnAveragePriceChanging(value);
                 ReportPropertyChanging("AveragePrice");
-                _AveragePrice = StructuralObject.SetValidValue(value);
+                _AveragePrice = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("AveragePrice");
                 OnAveragePriceChanged();
             }
         }
-        private Nullable<global::System.Double> _AveragePrice;
-        partial void OnAveragePriceChanging(Nullable<global::System.Double> value);
+        private global::System.String _AveragePrice;
+        partial void OnAveragePriceChanging(global::System.String value);
         partial void OnAveragePriceChanged();
     
         /// <summary>
@@ -1156,7 +1418,7 @@ namespace PizzaViki_DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Double> HighestPrice
+        public global::System.String HighestPrice
         {
             get
             {
@@ -1166,13 +1428,13 @@ namespace PizzaViki_DAL
             {
                 OnHighestPriceChanging(value);
                 ReportPropertyChanging("HighestPrice");
-                _HighestPrice = StructuralObject.SetValidValue(value);
+                _HighestPrice = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("HighestPrice");
                 OnHighestPriceChanged();
             }
         }
-        private Nullable<global::System.Double> _HighestPrice;
-        partial void OnHighestPriceChanging(Nullable<global::System.Double> value);
+        private global::System.String _HighestPrice;
+        partial void OnHighestPriceChanging(global::System.String value);
         partial void OnHighestPriceChanged();
     
         /// <summary>
@@ -1233,16 +1495,16 @@ namespace PizzaViki_DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_Product_Category1", "Category")]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_Product_Category", "Categories")]
         public Category Category
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category1", "Category").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category", "Categories").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category1", "Category").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category", "Categories").Value = value;
             }
         }
         /// <summary>
@@ -1254,13 +1516,187 @@ namespace PizzaViki_DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category1", "Category");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category", "Categories");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category1", "Category", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("PizzaVikiCategoriesModel.FK_Product_Category", "Categories", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="PizzaVikiCategoriesModel", Name="SubArea")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SubArea : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new SubArea object.
+        /// </summary>
+        /// <param name="id">Initial value of the id property.</param>
+        /// <param name="areaID">Initial value of the AreaID property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="delivaryPrice">Initial value of the DelivaryPrice property.</param>
+        public static SubArea CreateSubArea(global::System.Int32 id, global::System.Int32 areaID, global::System.String name, global::System.String delivaryPrice)
+        {
+            SubArea subArea = new SubArea();
+            subArea.id = id;
+            subArea.AreaID = areaID;
+            subArea.Name = name;
+            subArea.DelivaryPrice = delivaryPrice;
+            return subArea;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 AreaID
+        {
+            get
+            {
+                return _AreaID;
+            }
+            set
+            {
+                OnAreaIDChanging(value);
+                ReportPropertyChanging("AreaID");
+                _AreaID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AreaID");
+                OnAreaIDChanged();
+            }
+        }
+        private global::System.Int32 _AreaID;
+        partial void OnAreaIDChanging(global::System.Int32 value);
+        partial void OnAreaIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String DelivaryPrice
+        {
+            get
+            {
+                return _DelivaryPrice;
+            }
+            set
+            {
+                OnDelivaryPriceChanging(value);
+                ReportPropertyChanging("DelivaryPrice");
+                _DelivaryPrice = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("DelivaryPrice");
+                OnDelivaryPriceChanged();
+            }
+        }
+        private global::System.String _DelivaryPrice;
+        partial void OnDelivaryPriceChanging(global::System.String value);
+        partial void OnDelivaryPriceChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PizzaVikiCategoriesModel", "FK_SubAreas_Areas", "Areas")]
+        public Area Area
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Area>("PizzaVikiCategoriesModel.FK_SubAreas_Areas", "Areas").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Area>("PizzaVikiCategoriesModel.FK_SubAreas_Areas", "Areas").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Area> AreaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Area>("PizzaVikiCategoriesModel.FK_SubAreas_Areas", "Areas");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Area>("PizzaVikiCategoriesModel.FK_SubAreas_Areas", "Areas", value);
                 }
             }
         }

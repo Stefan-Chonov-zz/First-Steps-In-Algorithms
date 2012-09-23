@@ -43,9 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreasDAL.cs" />
     <Compile Include="CategoriesDAL.cs" />
-    <Compile Include="KatmiDAL.cs" />
-    <Compile Include="NavigationMenuDAL.cs" />
+    <Compile Include="CategoriesViewStylesDAL.cs" />
+    <Compile Include="EntityUtility.cs" />
     <Compile Include="PhoneOrdersDAL.cs" />
     <Compile Include="PizzasDAL.cs" />
     <Compile Include="PizzaVikiModel.Designer.cs">
@@ -54,7 +55,6 @@
       <DependentUpon>PizzaVikiModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaladsDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="PizzaVikiModel.edmx">

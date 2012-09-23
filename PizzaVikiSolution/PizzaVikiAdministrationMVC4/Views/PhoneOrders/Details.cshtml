@@ -1,0 +1,36 @@
+﻿@model PizzaViki_DAL.PhoneOrder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PhoneOrder</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OperatorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OperatorName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LogoImage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LogoImage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneNumber)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

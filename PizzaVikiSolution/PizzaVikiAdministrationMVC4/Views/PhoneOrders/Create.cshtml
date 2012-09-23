@@ -1,0 +1,51 @@
+﻿@model PizzaViki_DAL.PhoneOrder
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PhoneOrder</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OperatorName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OperatorName)
+            @Html.ValidationMessageFor(model => model.OperatorName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LogoImage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LogoImage)
+            @Html.ValidationMessageFor(model => model.LogoImage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PhoneNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PhoneNumber)
+            @Html.ValidationMessageFor(model => model.PhoneNumber)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

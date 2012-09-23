@@ -123,15 +123,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="CategoriesAndPhoneOrders.cs" />
-    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KatmiController.cs" />
-    <Compile Include="Controllers\PizzasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="KatmiMenuPhoneOrders.cs" />
-    <Compile Include="NavigationMenuAndPhoneOrders.cs" />
+    <Compile Include="HtmlExtensions.cs" />
     <Compile Include="ProductsNavigationMenusAndPhoneOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -139,30 +136,46 @@
     <Content Include="Content\Images\Backgrounds\main_background.jpg" />
     <Content Include="Content\Images\Backgrounds\middleBG.png" />
     <Content Include="Content\Images\Backgrounds\pancakes_background.jpg" />
-    <Content Include="Content\Images\Backgrounds\phones_header_background.png" />
+    <Content Include="Content\Images\Backgrounds\PhysicalAddress.jpg" />
     <Content Include="Content\Images\Backgrounds\pizzas_background.jpg" />
-    <Content Include="Content\Images\Backgrounds\transparent_texture.png" />
-    <Content Include="Content\Images\Categories\bakedPotatos_catalog.jpg" />
+    <Content Include="Content\Images\Backgrounds\transparent_texture_background.png" />
+    <Content Include="Content\Images\Categories\bakedPotatos_category.jpg" />
     <Content Include="Content\Images\Categories\burgers_category.jpg" />
     <Content Include="Content\Images\Categories\duners_category.jpg" />
     <Content Include="Content\Images\Categories\pancakes_category.jpg" />
     <Content Include="Content\Images\Categories\pizzas_category.jpg" />
+    <Content Include="Content\Images\Categories\purlenki_category.jpg" />
     <Content Include="Content\Images\Categories\salads_category.jpg" />
     <Content Include="Content\Images\Categories\sauces_category.jpg" />
+    <Content Include="Content\Images\CategoryTitles\bakedPotatosTitleBG.jpg" />
     <Content Include="Content\Images\CategoryTitles\pancakesTitleBG.jpg" />
     <Content Include="Content\Images\CategoryTitles\pizzaTitleBG.jpg" />
+    <Content Include="Content\Images\CategoryTitles\saladsTitleBG.jpg" />
     <Content Include="Content\Images\Headers\main_header.jpg" />
     <Content Include="Content\Images\Headers\pancakes_header.jpg" />
-    <Content Include="Content\Images\Headers\salads_background.jpg" />
+    <Content Include="Content\Images\Headers\purlenki_header.jpg" />
+    <Content Include="Content\Images\Headers\salads_header.jpg" />
+    <Content Include="Content\Images\Headers\sauces_header.jpg" />
     <Content Include="Content\Images\OperatorLogos\globul.png" />
     <Content Include="Content\Images\OperatorLogos\mtel_logo.png" />
     <Content Include="Content\Images\OperatorLogos\vivacom.png" />
+    <Content Include="Content\Images\Others\logo_background.jpg" />
     <Content Include="Content\Images\Others\logo_background.png" />
     <Content Include="Content\Images\Others\NiceButtonOver.png" />
     <Content Include="Content\Images\Others\nice_button.png" />
+    <Content Include="Content\Images\Others\pizzaSliceIcon.png" />
+    <Content Include="Content\Images\Pizzas\bialaToskana_backgroun.jpg" />
+    <Content Include="Content\Images\Pizzas\bialManhatun_backgroun.jpg" />
+    <Content Include="Content\Images\Pizzas\boloniya_backgroun.jpg" />
+    <Content Include="Content\Images\Pizzas\byalaBoloniya_backgroun.jpg" />
     <Content Include="Content\Images\Pizzas\galaxy_background.jpg" />
+    <Content Include="Content\Images\Pizzas\manhatun_backgroun.jpg" />
+    <Content Include="Content\Images\Pizzas\margarita_backgroun.jpg" />
     <Content Include="Content\Images\Pizzas\marsilia_background.jpg" />
     <Content Include="Content\Images\Pizzas\peperoni_background.jpg" />
+    <Content Include="Content\Images\Pizzas\perfecta_backgroun.jpg" />
+    <Content Include="Content\Images\Pizzas\toskana_backgroun.jpg" />
+    <Content Include="Content\Images\Pizzas\veneciya_backgroun.jpg" />
     <Content Include="Content\Images\Pizzas\viki_background.jpg" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -236,7 +249,7 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Shared\_LayoutPizzas.cshtml">
+    <Content Include="Views\Shared\_LayoutCategory.cshtml">
       <SubType>Code</SubType>
     </Content>
     <Content Include="Web.config" />
@@ -262,25 +275,19 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Pizzas\Pizzas.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PizzaViki_DAL\PizzaViki_DAL.csproj">
       <Project>{3E01CB38-98C7-46CD-8704-35CB7A21D09F}</Project>
       <Name>PizzaViki_DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_LayoutKatmi.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Katmi\Katmi.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Contacts\Contacts.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Shared\_LayoutContacts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Categories\Category.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Contacts.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -298,7 +305,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2000</DevelopmentServerPort>
+          <DevelopmentServerPort>57131</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

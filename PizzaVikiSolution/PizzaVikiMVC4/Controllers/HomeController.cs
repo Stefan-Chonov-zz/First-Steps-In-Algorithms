@@ -24,11 +24,23 @@ namespace PizzaVikiMVC4.Controllers
         {
             List<Category> categories = CategoriesDAL.GetCategories();
             List<PhoneOrder> phoneOrders = PhoneOrdersDAL.GetPhoneOrders();
-            List<NavigationMenu> navigationMenus = NavigationMenuDAL.GetNavigationMenus();
-
+            List<SubArea> subAreas = AreasDAL.GetSubAreas();
+            
             this.categoriesAndPhoneOrders.Categories = categories;
             this.categoriesAndPhoneOrders.PhoneOrders = phoneOrders;
-            this.categoriesAndPhoneOrders.NavigationMenus = navigationMenus;
+            this.categoriesAndPhoneOrders.SubAreas = subAreas;
+
+            return View(categoriesAndPhoneOrders);
+        }
+        
+        public ActionResult Contacts()
+        {
+            List<Category> categories = CategoriesDAL.GetCategories();
+            List<PhoneOrder> phoneOrders = PhoneOrdersDAL.GetPhoneOrders();
+
+            ProductsCategoriesAndPhoneOrders categoriesAndPhoneOrders = new ProductsCategoriesAndPhoneOrders();
+            categoriesAndPhoneOrders.Categories = categories;
+            categoriesAndPhoneOrders.PhoneOrders = phoneOrders;
 
             return View(categoriesAndPhoneOrders);
         }

@@ -1,4 +1,5 @@
-﻿@model PizzaVikiMVC4.CategoriesAndPhoneOrders
+﻿@using PizzaVikiMVC4;
+@model CategoriesAndPhoneOrders
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";    
@@ -10,26 +11,34 @@
 		    <article id="menu">
 			    <ul>
 				    <li>
-					    <a href="/Home/Index/" title="Начало" id="Home" target="_self">Начало</a>
+					    <a href="/Home/Index/" title="Начало" id="Home" target="_self">Начало</a> 
 				    </li>
 				    <li>
 					    <a href="/Home/Index/" target="_self">Меню</a>
-					    <ul>
-                            @foreach (var navMenu in Model.NavigationMenus)
+					    <ul>                        
+                            @foreach (var navMenu in Model.Categories)
                             {
-						        <li><a href="@navMenu.Link" title="@navMenu.Title" id="pici" target="_self">@navMenu.Text</a></li>
+                                string[] arr = navMenu.Link.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+                                
+                                <li>
+                                    @Html.ActionLink(
+                                        navMenu.Title,
+                                        arr[1],
+                                        arr[0],
+                                        new { categoryName = navMenu.Name },
+                                        new { id = navMenu.Name })
+                               </li>
                             }
 					    </ul>
 				    </li>
 				    <li>
-					    <a href="/Contacts/Contacts/" title="Контакти" id="Contacts" target="_self">Контакти</a>
+					    <a href="/Home/Contacts/" title="Контакти" id="Contacts" target="_self">Контакти</a>
 				    </li>
 			    </ul>
 		    </article>
 	    </section>
     </nav>
 }
-
 
 <article>					
 	<aside class="vertboxleft">
@@ -38,9 +47,17 @@
             {                    
                 <tr>
 					<td>
-						<a href="@Model.Categories[i].Link" title="@Model.Categories[i].Title" class="bodymenu">
-							<img class="image" src="@Model.Categories[i].BackgroundImagePath" alt="pizza"/>
-						</a>
+                        @{char[] separators = { '/', };}
+                        @{string[] arr = @Model.Categories[i].Link.Split(separators, StringSplitOptions.RemoveEmptyEntries);}
+
+                        @Html.ImageActionLink(
+                            Url.Content(Model.Categories[i].BackgroundImagePath), 
+                            String.Empty, 
+                            arr[1], 
+                            arr[0], 
+                            new { categoryName = Model.Categories[i].Name }, 
+                            new{ title = Model.Categories[i].Title, id = Model.Categories[i].Name, @class = "bodymenu"}, 
+                            new { @class="image", alt = "pancakes"})
 					</td>
 
                     @if (i + 1 >= Model.Categories.Count)
@@ -53,9 +70,16 @@
                     }
 
 					<td>
-						<a href="@Model.Categories[i].Link" title="@Model.Categories[i].Title" class="bodymenu">
-							<img class="image" src="@Model.Categories[i].BackgroundImagePath" alt="pancakes"/>
-						</a>
+						 @{arr = @Model.Categories[i].Link.Split(separators, StringSplitOptions.RemoveEmptyEntries);}
+                         
+                         @Html.ImageActionLink(
+                            Url.Content(Model.Categories[i].BackgroundImagePath), 
+                            String.Empty, 
+                            arr[1], 
+                            arr[0], 
+                            new { categoryName = Model.Categories[i].Name }, 
+                            new{ title = Model.Categories[i].Title, id = Model.Categories[i].Name, @class = "bodymenu"}, 
+                            new { @class="image", alt = "pancakes"})
 					</td>
 				</tr>                    
             }	
@@ -84,59 +108,26 @@
 					</li>
 				</ul>
 			</article>
-			<article id="region_1">
-					<p>За районите: </p>
-					<br/><br/>
-					<div id="region_1_info">
-						<ul>
-							<li>
-								Надежда<br/> 
-							</li>
-							<li>
-								Свобода <br/>
-							</li>
-							<li>
-								Толстой <br/>
-							</li>
-						</ul>
-						<h5>Доставка: 1,50 лв.<br/>
-						Над 10,00 лв. - Безплатна доставка.
-						</h5>
-					</div>
-				<hr/><br/>
-					<p>За районите: </p><br/><br/>
-					<div id="region_2_info">
-						<ul>												
-							<li>
-								Обеля <br/>
-							</li>												
-							<li>
-								Люлин <br/>
-							</li>
-							<li>
-								Илияци<br/> 
-							</li>
-							<li>
-								Банишора <br/>
-							</li>
-							<li>
-								Света Троица <br/>
-							</li>
-							<li>
-								Военна рампа <br/>
-							</li>
-							<li>
-								Захарна фабрика <br/>
-							</li>
-							<li>
-								Модерно предградие <br/>
-							</li>
-						</ul>
-						<h5>
-							Минимална поръчка: 10,00 лв.<br/>
-							Доставка: 1,50 лв.
-						</h5>
-					</div>									
+			<article id="region_1">	
+                    <div>
+						<h3>Доставки</h3>
+					</div><hr />				
+                    @foreach (var subArea in @Model.SubAreas)
+                    {
+                        <p>За районите: </p>
+					    <br/><br/>
+					    <div id="region_1_info">
+						    <ul>
+							    <li>
+								    @subArea.Name
+							    </li>
+						    </ul>
+						    <h5>
+                                Доставка: @subArea.DelivaryPrice<br/>
+						    </h5>
+					    </div>
+                        <hr/><br/>
+                    }						
 			</article>
 		</section>
 	</aside>

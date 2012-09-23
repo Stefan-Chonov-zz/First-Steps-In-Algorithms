@@ -4,10 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<a href="/Home/Index/">Начало</a>
+<h2>Категории</h2>
+
+@Html.ActionLink("Начало", "Index", "Home")
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Създаване на нова категория", "Create")
 </p>
 <table>
     <tr>
@@ -41,9 +43,9 @@
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Редактирай", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Дедайли", "Details", new { id=item.id }) |
+            @Html.ActionLink("Изтрии", "Delete", new { id=item.id })
         </td>
     </tr>
 }

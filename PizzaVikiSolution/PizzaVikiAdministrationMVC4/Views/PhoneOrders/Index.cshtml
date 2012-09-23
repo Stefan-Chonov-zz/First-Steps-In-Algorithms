@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PizzaViki_DAL.PhoneOrder>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Телефони за поръчки</h2>
+
+@Html.ActionLink("Начало", "Index", "Home")
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OperatorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OperatorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LogoImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Редактирай", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Детайли", "Details", new { id=item.id }) |
+            @Html.ActionLink("Изтрии", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

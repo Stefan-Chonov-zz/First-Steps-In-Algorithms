@@ -6,29 +6,46 @@
     <edmx:StorageModels>
       <Schema Namespace="PizzaVikiCategoriesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="PizzaVikiCategoriesModelStoreContainer">
-          <EntitySet Name="Category" EntityType="PizzaVikiCategoriesModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Areas" EntityType="PizzaVikiCategoriesModel.Store.Areas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Categories" EntityType="PizzaVikiCategoriesModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CategoriesViewStyles" EntityType="PizzaVikiCategoriesModel.Store.CategoriesViewStyles" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="MainTable" EntityType="PizzaVikiCategoriesModel.Store.MainTable" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="NavigationMenu" EntityType="PizzaVikiCategoriesModel.Store.NavigationMenu" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="PhoneOrders" EntityType="PizzaVikiCategoriesModel.Store.PhoneOrders" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Product" EntityType="PizzaVikiCategoriesModel.Store.Product" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_MainTable_Category" Association="PizzaVikiCategoriesModel.Store.FK_MainTable_Category">
-            <End Role="Category" EntitySet="Category" />
+          <EntitySet Name="Products" EntityType="PizzaVikiCategoriesModel.Store.Products" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubAreas" EntityType="PizzaVikiCategoriesModel.Store.SubAreas" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CategoriesViewStyles_Category" Association="PizzaVikiCategoriesModel.Store.FK_CategoriesViewStyles_Category">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="CategoriesViewStyles" EntitySet="CategoriesViewStyles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainTable_Areas" Association="PizzaVikiCategoriesModel.Store.FK_MainTable_Areas">
+            <End Role="Areas" EntitySet="Areas" />
             <End Role="MainTable" EntitySet="MainTable" />
           </AssociationSet>
-          <AssociationSet Name="FK_MainTable_NavigationMenu1" Association="PizzaVikiCategoriesModel.Store.FK_MainTable_NavigationMenu1">
-            <End Role="NavigationMenu" EntitySet="NavigationMenu" />
+          <AssociationSet Name="FK_MainTable_Category1" Association="PizzaVikiCategoriesModel.Store.FK_MainTable_Category1">
+            <End Role="Categories" EntitySet="Categories" />
             <End Role="MainTable" EntitySet="MainTable" />
           </AssociationSet>
           <AssociationSet Name="FK_MainTable_PhoneOrders" Association="PizzaVikiCategoriesModel.Store.FK_MainTable_PhoneOrders">
             <End Role="PhoneOrders" EntitySet="PhoneOrders" />
             <End Role="MainTable" EntitySet="MainTable" />
           </AssociationSet>
-          <AssociationSet Name="FK_Product_Category1" Association="PizzaVikiCategoriesModel.Store.FK_Product_Category1">
-            <End Role="Category" EntitySet="Category" />
-            <End Role="Product" EntitySet="Product" />
+          <AssociationSet Name="FK_Product_Category" Association="PizzaVikiCategoriesModel.Store.FK_Product_Category">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubAreas_Areas" Association="PizzaVikiCategoriesModel.Store.FK_SubAreas_Areas">
+            <End Role="Areas" EntitySet="Areas" />
+            <End Role="SubAreas" EntitySet="SubAreas" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Category">
+        <EntityType Name="Areas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -38,68 +55,91 @@
           <Property Name="Link" Type="nvarchar" Nullable="false" MaxLength="200" />
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
+        <EntityType Name="CategoriesViewStyles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BackgroundImagePath" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="HeaderBackgroundImagePath" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="CategoryTitleImage" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="MainTable">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CategoryID" Type="int" Nullable="false" />
-          <Property Name="NavigationMenu" Type="int" Nullable="false" />
+          <Property Name="CategoriesViewStylesID" Type="int" Nullable="false" />
           <Property Name="PhoneOrders" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="NavigationMenu">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Link" Type="nvarchar" Nullable="false" MaxLength="100" />
-          <Property Name="Text" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="AreaID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PhoneOrders">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="OperatorName" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="LogoImage" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="OperatorName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LogoImage" Type="nvarchar" MaxLength="100" />
           <Property Name="PhoneNumber" Type="nvarchar" Nullable="false" MaxLength="20" />
         </EntityType>
-        <EntityType Name="Product">
+        <EntityType Name="Products">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="BackgroundImagePath" Type="nvarchar" Nullable="false" MaxLength="100" />
-          <Property Name="Ingredients" Type="nvarchar" MaxLength="100" />
-          <Property Name="LowestPrice" Type="float" />
-          <Property Name="AveragePrice" Type="float" />
-          <Property Name="HighestPrice" Type="float" />
+          <Property Name="Ingredients" Type="nvarchar" MaxLength="200" />
+          <Property Name="LowestPrice" Type="nvarchar" MaxLength="10" />
+          <Property Name="AveragePrice" Type="nvarchar" MaxLength="10" />
+          <Property Name="HighestPrice" Type="nvarchar" MaxLength="10" />
           <Property Name="Weight" Type="float" />
           <Property Name="CategoryID" Type="int" />
         </EntityType>
-        <Association Name="FK_MainTable_Category">
-          <End Role="Category" Type="PizzaVikiCategoriesModel.Store.Category" Multiplicity="1" />
-          <End Role="MainTable" Type="PizzaVikiCategoriesModel.Store.MainTable" Multiplicity="*" />
+        <EntityType Name="SubAreas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AreaID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="DelivaryPrice" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_CategoriesViewStyles_Category">
+          <End Role="Categories" Type="PizzaVikiCategoriesModel.Store.Categories" Multiplicity="0..1" />
+          <End Role="CategoriesViewStyles" Type="PizzaVikiCategoriesModel.Store.CategoriesViewStyles" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Category">
+            <Principal Role="Categories">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="MainTable">
+            <Dependent Role="CategoriesViewStyles">
               <PropertyRef Name="CategoryID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_MainTable_NavigationMenu1">
-          <End Role="NavigationMenu" Type="PizzaVikiCategoriesModel.Store.NavigationMenu" Multiplicity="1" />
+        <Association Name="FK_MainTable_Areas">
+          <End Role="Areas" Type="PizzaVikiCategoriesModel.Store.Areas" Multiplicity="1" />
           <End Role="MainTable" Type="PizzaVikiCategoriesModel.Store.MainTable" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="NavigationMenu">
+            <Principal Role="Areas">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="MainTable">
-              <PropertyRef Name="NavigationMenu" />
+              <PropertyRef Name="AreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainTable_Category1">
+          <End Role="Categories" Type="PizzaVikiCategoriesModel.Store.Categories" Multiplicity="1" />
+          <End Role="MainTable" Type="PizzaVikiCategoriesModel.Store.MainTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MainTable">
+              <PropertyRef Name="CategoryID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -115,15 +155,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Product_Category1">
-          <End Role="Category" Type="PizzaVikiCategoriesModel.Store.Category" Multiplicity="0..1" />
-          <End Role="Product" Type="PizzaVikiCategoriesModel.Store.Product" Multiplicity="*" />
+        <Association Name="FK_Product_Category">
+          <End Role="Categories" Type="PizzaVikiCategoriesModel.Store.Categories" Multiplicity="0..1" />
+          <End Role="Products" Type="PizzaVikiCategoriesModel.Store.Products" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Category">
+            <Principal Role="Categories">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Product">
+            <Dependent Role="Products">
               <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubAreas_Areas">
+          <End Role="Areas" Type="PizzaVikiCategoriesModel.Store.Areas" Multiplicity="1" />
+          <End Role="SubAreas" Type="PizzaVikiCategoriesModel.Store.SubAreas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Areas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="SubAreas">
+              <PropertyRef Name="AreaID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -133,28 +185,47 @@
     <edmx:ConceptualModels>
       <Schema Namespace="PizzaVikiCategoriesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="PizzaVikiCategoriesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Areas" EntityType="PizzaVikiCategoriesModel.Area" />
           <EntitySet Name="Categories" EntityType="PizzaVikiCategoriesModel.Category" />
+          <EntitySet Name="CategoriesViewStyles" EntityType="PizzaVikiCategoriesModel.CategoriesViewStyle" />
           <EntitySet Name="MainTables" EntityType="PizzaVikiCategoriesModel.MainTable" />
-          <EntitySet Name="NavigationMenus" EntityType="PizzaVikiCategoriesModel.NavigationMenu" />
           <EntitySet Name="PhoneOrders" EntityType="PizzaVikiCategoriesModel.PhoneOrder" />
           <EntitySet Name="Products" EntityType="PizzaVikiCategoriesModel.Product" />
-          <AssociationSet Name="FK_MainTable_Category" Association="PizzaVikiCategoriesModel.FK_MainTable_Category">
-            <End Role="Category" EntitySet="Categories" />
+          <EntitySet Name="SubAreas" EntityType="PizzaVikiCategoriesModel.SubArea" />
+          <AssociationSet Name="FK_MainTable_Areas" Association="PizzaVikiCategoriesModel.FK_MainTable_Areas">
+            <End Role="Areas" EntitySet="Areas" />
             <End Role="MainTable" EntitySet="MainTables" />
           </AssociationSet>
-          <AssociationSet Name="FK_Product_Category1" Association="PizzaVikiCategoriesModel.FK_Product_Category1">
-            <End Role="Category" EntitySet="Categories" />
-            <End Role="Product" EntitySet="Products" />
+          <AssociationSet Name="FK_SubAreas_Areas" Association="PizzaVikiCategoriesModel.FK_SubAreas_Areas">
+            <End Role="Areas" EntitySet="Areas" />
+            <End Role="SubAreas" EntitySet="SubAreas" />
           </AssociationSet>
-          <AssociationSet Name="FK_MainTable_NavigationMenu1" Association="PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1">
-            <End Role="NavigationMenu" EntitySet="NavigationMenus" />
+          <AssociationSet Name="FK_CategoriesViewStyles_Category" Association="PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="CategoriesViewStyles" EntitySet="CategoriesViewStyles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainTable_Category1" Association="PizzaVikiCategoriesModel.FK_MainTable_Category1">
+            <End Role="Categories" EntitySet="Categories" />
             <End Role="MainTable" EntitySet="MainTables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Category" Association="PizzaVikiCategoriesModel.FK_Product_Category">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
           </AssociationSet>
           <AssociationSet Name="FK_MainTable_PhoneOrders" Association="PizzaVikiCategoriesModel.FK_MainTable_PhoneOrders">
             <End Role="PhoneOrders" EntitySet="PhoneOrders" />
             <End Role="MainTable" EntitySet="MainTables" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MainTables" Relationship="PizzaVikiCategoriesModel.FK_MainTable_Areas" FromRole="Areas" ToRole="MainTable" />
+          <NavigationProperty Name="SubAreas" Relationship="PizzaVikiCategoriesModel.FK_SubAreas_Areas" FromRole="Areas" ToRole="SubAreas" />
+        </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="id" />
@@ -164,8 +235,20 @@
           <Property Name="BackgroundImagePath" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="Link" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="MainTables" Relationship="PizzaVikiCategoriesModel.FK_MainTable_Category" FromRole="Category" ToRole="MainTable" />
-          <NavigationProperty Name="Products" Relationship="PizzaVikiCategoriesModel.FK_Product_Category1" FromRole="Category" ToRole="Product" />
+          <NavigationProperty Name="CategoriesViewStyles" Relationship="PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category" FromRole="Categories" ToRole="CategoriesViewStyles" />
+          <NavigationProperty Name="MainTables" Relationship="PizzaVikiCategoriesModel.FK_MainTable_Category1" FromRole="Categories" ToRole="MainTable" />
+          <NavigationProperty Name="Products" Relationship="PizzaVikiCategoriesModel.FK_Product_Category" FromRole="Categories" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="CategoriesViewStyle">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BackgroundImagePath" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="HeaderBackgroundImagePath" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="CategoryTitleImage" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Category" Relationship="PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category" FromRole="CategoriesViewStyles" ToRole="Categories" />
         </EntityType>
         <EntityType Name="MainTable">
           <Key>
@@ -173,29 +256,20 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
-          <Property Name="NavigationMenu" Type="Int32" Nullable="false" />
+          <Property Name="CategoriesViewStylesID" Type="Int32" Nullable="false" />
           <Property Name="PhoneOrders" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Category" Relationship="PizzaVikiCategoriesModel.FK_MainTable_Category" FromRole="MainTable" ToRole="Category" />
-          <NavigationProperty Name="NavigationMenu1" Relationship="PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1" FromRole="MainTable" ToRole="NavigationMenu" />
+          <Property Name="AreaID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Area" Relationship="PizzaVikiCategoriesModel.FK_MainTable_Areas" FromRole="MainTable" ToRole="Areas" />
+          <NavigationProperty Name="Category" Relationship="PizzaVikiCategoriesModel.FK_MainTable_Category1" FromRole="MainTable" ToRole="Categories" />
           <NavigationProperty Name="PhoneOrder" Relationship="PizzaVikiCategoriesModel.FK_MainTable_PhoneOrders" FromRole="MainTable" ToRole="PhoneOrders" />
-        </EntityType>
-        <EntityType Name="NavigationMenu">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="Link" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Text" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="MainTables" Relationship="PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1" FromRole="NavigationMenu" ToRole="MainTable" />
         </EntityType>
         <EntityType Name="PhoneOrder">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="OperatorName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="LogoImage" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="OperatorName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LogoImage" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="MainTables" Relationship="PizzaVikiCategoriesModel.FK_MainTable_PhoneOrders" FromRole="PhoneOrders" ToRole="MainTable" />
         </EntityType>
@@ -206,19 +280,65 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="BackgroundImagePath" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Ingredients" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="LowestPrice" Type="Double" />
-          <Property Name="AveragePrice" Type="Double" />
-          <Property Name="HighestPrice" Type="Double" />
+          <Property Name="Ingredients" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="LowestPrice" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="AveragePrice" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="HighestPrice" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="Weight" Type="Double" />
           <Property Name="CategoryID" Type="Int32" />
-          <NavigationProperty Name="Category" Relationship="PizzaVikiCategoriesModel.FK_Product_Category1" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="Category" Relationship="PizzaVikiCategoriesModel.FK_Product_Category" FromRole="Products" ToRole="Categories" />
         </EntityType>
-        <Association Name="FK_MainTable_Category">
-          <End Role="Category" Type="PizzaVikiCategoriesModel.Category" Multiplicity="1" />
+        <EntityType Name="SubArea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AreaID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="DelivaryPrice" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Area" Relationship="PizzaVikiCategoriesModel.FK_SubAreas_Areas" FromRole="SubAreas" ToRole="Areas" />
+        </EntityType>
+        <Association Name="FK_MainTable_Areas">
+          <End Role="Areas" Type="PizzaVikiCategoriesModel.Area" Multiplicity="1" />
           <End Role="MainTable" Type="PizzaVikiCategoriesModel.MainTable" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Category">
+            <Principal Role="Areas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MainTable">
+              <PropertyRef Name="AreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubAreas_Areas">
+          <End Role="Areas" Type="PizzaVikiCategoriesModel.Area" Multiplicity="1" />
+          <End Role="SubAreas" Type="PizzaVikiCategoriesModel.SubArea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Areas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="SubAreas">
+              <PropertyRef Name="AreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CategoriesViewStyles_Category">
+          <End Role="Categories" Type="PizzaVikiCategoriesModel.Category" Multiplicity="0..1" />
+          <End Role="CategoriesViewStyles" Type="PizzaVikiCategoriesModel.CategoriesViewStyle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CategoriesViewStyles">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainTable_Category1">
+          <End Role="Categories" Type="PizzaVikiCategoriesModel.Category" Multiplicity="1" />
+          <End Role="MainTable" Type="PizzaVikiCategoriesModel.MainTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="MainTable">
@@ -226,27 +346,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Product_Category1">
-          <End Role="Category" Type="PizzaVikiCategoriesModel.Category" Multiplicity="0..1" />
-          <End Role="Product" Type="PizzaVikiCategoriesModel.Product" Multiplicity="*" />
+        <Association Name="FK_Product_Category">
+          <End Role="Categories" Type="PizzaVikiCategoriesModel.Category" Multiplicity="0..1" />
+          <End Role="Products" Type="PizzaVikiCategoriesModel.Product" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Category">
+            <Principal Role="Categories">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Product">
+            <Dependent Role="Products">
               <PropertyRef Name="CategoryID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_MainTable_NavigationMenu1">
-          <End Role="NavigationMenu" Type="PizzaVikiCategoriesModel.NavigationMenu" Multiplicity="1" />
-          <End Role="MainTable" Type="PizzaVikiCategoriesModel.MainTable" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NavigationMenu">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="MainTable">
-              <PropertyRef Name="NavigationMenu" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -268,24 +376,30 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PizzaVikiCategoriesModelStoreContainer" CdmEntityContainer="PizzaVikiCategoriesEntities">
-          <EntitySetMapping Name="Categories"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.Category"><MappingFragment StoreEntitySet="Category">
+          <EntitySetMapping Name="Areas"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.Area"><MappingFragment StoreEntitySet="Areas">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Categories"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.Category"><MappingFragment StoreEntitySet="Categories">
             <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="BackgroundImagePath" ColumnName="BackgroundImagePath" />
             <ScalarProperty Name="Link" ColumnName="Link" />
             <ScalarProperty Name="Title" ColumnName="Title" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CategoriesViewStyles"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.CategoriesViewStyle"><MappingFragment StoreEntitySet="CategoriesViewStyles">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="BackgroundImagePath" ColumnName="BackgroundImagePath" />
+            <ScalarProperty Name="HeaderBackgroundImagePath" ColumnName="HeaderBackgroundImagePath" />
+            <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            <ScalarProperty Name="CategoryTitleImage" ColumnName="CategoryTitleImage" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="MainTables"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.MainTable"><MappingFragment StoreEntitySet="MainTable">
             <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-            <ScalarProperty Name="NavigationMenu" ColumnName="NavigationMenu" />
+            <ScalarProperty Name="CategoriesViewStylesID" ColumnName="CategoriesViewStylesID" />
             <ScalarProperty Name="PhoneOrders" ColumnName="PhoneOrders" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="NavigationMenus"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.NavigationMenu"><MappingFragment StoreEntitySet="NavigationMenu">
-            <ScalarProperty Name="id" ColumnName="id" />
-            <ScalarProperty Name="Title" ColumnName="Title" />
-            <ScalarProperty Name="Link" ColumnName="Link" />
-            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="AreaID" ColumnName="AreaID" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="PhoneOrders"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.PhoneOrder"><MappingFragment StoreEntitySet="PhoneOrders">
             <ScalarProperty Name="id" ColumnName="id" />
@@ -293,7 +407,7 @@
             <ScalarProperty Name="LogoImage" ColumnName="LogoImage" />
             <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Products"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.Product"><MappingFragment StoreEntitySet="Product">
+          <EntitySetMapping Name="Products"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.Product"><MappingFragment StoreEntitySet="Products">
             <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="BackgroundImagePath" ColumnName="BackgroundImagePath" />
@@ -303,6 +417,12 @@
             <ScalarProperty Name="HighestPrice" ColumnName="HighestPrice" />
             <ScalarProperty Name="Weight" ColumnName="Weight" />
             <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SubAreas"><EntityTypeMapping TypeName="PizzaVikiCategoriesModel.SubArea"><MappingFragment StoreEntitySet="SubAreas">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="DelivaryPrice" ColumnName="DelivaryPrice" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
@@ -325,28 +445,39 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="PizzaVikiModel">
-        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.Category" Width="1.5" PointX="1.875" PointY="3.75" Height="2.3648893229166656" IsExpanded="true" />
-        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.MainTable" Width="1.5" PointX="5.25" PointY="1.375" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.NavigationMenu" Width="1.5" PointX="5.25" PointY="4.125" Height="1.9802864583333335" IsExpanded="true" />
-        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.PhoneOrder" Width="1.5" PointX="8.125" PointY="4.125" Height="1.9802864583333335" IsExpanded="true" />
-        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.Product" Width="1.5" PointX="1.875" PointY="6.875" Height="2.9417936197916648" IsExpanded="true" />
-        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_MainTable_Category" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.625" PointY="3.75" />
-          <ConnectorPoint PointX="2.625" PointY="2.5574446614583337" />
-          <ConnectorPoint PointX="5.25" PointY="2.5574446614583337" />
+        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.Area" Width="1.5" PointX="3.75" PointY="7.25" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.Category" Width="1.5" PointX="0.75" PointY="5.25" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.CategoriesViewStyle" Width="1.5" PointX="3" PointY="3.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.MainTable" Width="1.5" PointX="6" PointY="5.25" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.PhoneOrder" Width="1.5" PointX="3.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.Product" Width="1.5" PointX="3" PointY="9.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaVikiCategoriesModel.SubArea" Width="1.5" PointX="6" PointY="9.125" Height="1.9802864583333317" IsExpanded="true" />
+        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_MainTable_Areas" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="7.5285953776041667" />
+          <ConnectorPoint PointX="6" PointY="7.5285953776041667" />
         </AssociationConnector>
-        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_Product_Category1" ManuallyRouted="true">
-          <ConnectorPoint PointX="2.625" PointY="6.1148893229166656" />
-          <ConnectorPoint PointX="2.625" PointY="6.875" />
+        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_SubAreas_Areas" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.90625" PointY="9.0379850260416656" />
+          <ConnectorPoint PointX="4.90625" PointY="9.40625" />
+          <ConnectorPoint PointX="6" PointY="9.40625" />
         </AssociationConnector>
-        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_MainTable_NavigationMenu1" ManuallyRouted="false">
-          <ConnectorPoint PointX="6" PointY="4.125" />
-          <ConnectorPoint PointX="6" PointY="3.7398893229166674" />
+        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_CategoriesViewStyles_Category" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.4612939453125" />
+          <ConnectorPoint PointX="3" PointY="5.4612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_MainTable_Category1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.4612939453125" />
+          <ConnectorPoint PointX="6" PointY="6.4612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="PizzaVikiCategoriesModel.FK_Product_Category" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="7.8071907552083317" />
+          <ConnectorPoint PointX="1.5" PointY="11.220896809895834" />
+          <ConnectorPoint PointX="3" PointY="11.220896809895834" />
         </AssociationConnector>
         <AssociationConnector Association="PizzaVikiCategoriesModel.FK_MainTable_PhoneOrders" ManuallyRouted="false">
-          <ConnectorPoint PointX="8.875" PointY="4.125" />
-          <ConnectorPoint PointX="8.875" PointY="2.5574446614583337" />
-          <ConnectorPoint PointX="6.75" PointY="2.5574446614583337" />
+          <ConnectorPoint PointX="5.25" PointY="1.7401432291666668" />
+          <ConnectorPoint PointX="6.75" PointY="1.7401432291666668" />
+          <ConnectorPoint PointX="6.75" PointY="5.25" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

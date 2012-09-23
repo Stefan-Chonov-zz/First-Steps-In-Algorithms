@@ -10,13 +10,14 @@ namespace PizzaVikiMVC4
     {
         private List<Category> categories;
         private List<PhoneOrder> phoneOrders;
-        private List<NavigationMenu> navigationMenus;
+        private List<Category> navigationMenus;
+        private List<SubArea> subAreas;
 
         public CategoriesAndPhoneOrders()
         {
             this.categories = new List<Category>();
             this.phoneOrders = new List<PhoneOrder>();
-            this.navigationMenus = new List<NavigationMenu>();
+            this.navigationMenus = new List<Category>();
         }
 
         public List<Category> Categories
@@ -43,7 +44,7 @@ namespace PizzaVikiMVC4
             }
         }
 
-        public List<NavigationMenu> NavigationMenus
+        public List<Category> NavigationMenus
         {
             get
             {
@@ -52,6 +53,18 @@ namespace PizzaVikiMVC4
             set
             {
                 this.navigationMenus = value;
+            }
+        }
+
+        public List<SubArea> SubAreas 
+        {
+            get
+            {
+                return this.subAreas;
+            }
+            set
+            {
+                this.subAreas = value;
             }
         }
     }

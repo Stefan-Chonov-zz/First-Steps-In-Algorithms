@@ -7,35 +7,18 @@ namespace PizzaViki_DAL
 {
     public static class PizzasDAL
     {
+        private const string CATEGORY_NAME = "Pizzas";
+
         public static List<Product> GetPizzas()
         {
-            PizzaVikiCategoriesEntities pizzaVikiDB = new PizzaVikiCategoriesEntities();
+            List<Product> pizzas = EntityUtility.GetProductsByCategory(CATEGORY_NAME);
 
-            int pizzasID = pizzaVikiDB.Categories.FirstOrDefault(x => x.Name.Equals("Pizzas")).id;            
-            
-            var pizzas =
-                from product in pizzaVikiDB.Products
-                where product.CategoryID == pizzasID
-                select product;
-
-            return pizzas.ToList();            
+            return pizzas;            
         }
 
         public static void AddPizza(string name, string backgroundImagePath, string ingredients)
         {
-            PizzaVikiCategoriesEntities pizzaVikiDB = new PizzaVikiCategoriesEntities();
-
-            int pizzasID = pizzaVikiDB.Categories.FirstOrDefault(x => x.Name.Equals("Pizzas")).id; 
-
-            pizzaVikiDB.Products.AddObject(new Product()
-            {
-                CategoryID = pizzasID,
-                Name = name,
-                BackgroundImagePath = backgroundImagePath,
-                Ingredients = ingredients
-            });
-
-            pizzaVikiDB.SaveChanges();
+            EntityUtility.AddProduct(CATEGORY_NAME, name, backgroundImagePath, ingredients, null, null, null, null);
         }
     }
 }

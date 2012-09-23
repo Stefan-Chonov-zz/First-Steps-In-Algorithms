@@ -6,17 +6,63 @@ using PizzaViki_DAL;
 
 namespace PizzaVikiMVC4
 {
-    public class ProductsNavigationMenusAndPhoneOrders
+    public class ProductsCategoriesAndPhoneOrders
     {
-        private List<Product> products;
-        private List<PhoneOrder> phoneOrders;
-        private List<NavigationMenu> navigationMenus;
+        private string categoryName;
+        private string categoryTitle;
 
-        public ProductsNavigationMenusAndPhoneOrders()
+        private CategoryViewStyle categoryViewStyles;
+
+        private List<Product> products;
+        private List<Category> categories;        
+        private List<PhoneOrder> phoneOrders;
+
+        public ProductsCategoriesAndPhoneOrders()
         {
+            this.categoryName = null;
+            this.categoryTitle = null;
+
+            this.categoryViewStyles = new CategoryViewStyle();
+
             this.products = new List<Product>();
+            this.categories = new List<Category>();            
             this.phoneOrders = new List<PhoneOrder>();
-            this.navigationMenus = new List<NavigationMenu>();
+        }
+
+        public string CategoryName
+        {
+            get
+            {
+                return this.categoryName;
+            }
+            set
+            {
+                this.categoryName = value;
+            }
+        }
+
+        public string CategoryTitle
+        {
+            get
+            {
+                return this.categoryTitle;
+            }
+            set
+            {
+                this.categoryTitle = value;
+            }
+        }
+
+        public CategoryViewStyle CategoryViewStyles
+        {
+            get
+            {
+                return this.categoryViewStyles;
+            }
+            set
+            {
+                this.categoryViewStyles = value;
+            }
         }
 
         public List<Product> Products
@@ -43,15 +89,15 @@ namespace PizzaVikiMVC4
             }
         }
 
-        public List<NavigationMenu> NavigationMenus
+        public List<Category> Categories
         {
             get
             {
-                return this.navigationMenus;
+                return this.categories;
             }
             set
             {
-                this.navigationMenus = value;
+                this.categories = value;
             }
         }
     }
